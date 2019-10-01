@@ -20,15 +20,6 @@ class App extends Component {
     autumn: ['#C32F27', '#D8572A', '#DB7C26', '#F7B538', '#780116'],
     forest: ['#DDFCAD', '#C8E087',' #95A472', '#82846D', '#646165']
     },
-    getTheme: function(){
-      var themez = this.themes[Math.floor(Math.random() * this.themes.length)]
-      return {themez: this.themes}
-    },
-    applyTheme: function(){
-      console.log(this.getTheme())
-      return this.getTheme()
-      
-    }
   }
   render () {
     return (
@@ -46,9 +37,9 @@ class App extends Component {
           autoComplete="off" 
           />
           <input type="submit" />
-			<div style={{background: this.state.applyTheme()}}>
+			<div>
       <Link className='btnHome' to='/home'>Home</Link>
-				<button onClick={this.state.getTheme()}>Make change</button>
+				<button>Make change</button>
 			</div>
         </form>
         </>
