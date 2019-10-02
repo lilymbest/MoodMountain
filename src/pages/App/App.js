@@ -28,21 +28,24 @@ class App extends Component {
       <div className="App">
       <Route exact path='/' render={() =>
       <>
-        <div>{this.state.moods}</div>
+        <header className='feelingToday'>How are you feeling today?</header>
 
-        <form className="add-form">
-          <input 
+        <div className="moods">{this.state.moods}</div>
+
+        <form>
+          <input className="inputField"
           type="text" 
           onChange={this.handleOnChange} 
           value={this.state.moodInput} 
           autoComplete="off" 
           />
           <input type="submit" />
+          </form>
 			<div>
-      <header className='header-footer'>Set Difficulty Level</header>
-      <Link className='btnTheme' to='/themecolors'>Change Look</Link>
+
+      <Link className='btnTheme' to='/themecolors'>Change Theme</Link>
 			</div>
-        </form>
+
         </>
       } />
         <Route exact path='/themecolors' render={() => 
