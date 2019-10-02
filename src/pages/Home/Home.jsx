@@ -25,7 +25,6 @@ class Home extends Component{
     this.defaultTheme = this.defaultTheme.bind(this)
 }
 autumnTheme(){
-    var images = this.state.images
     var autumn = this.state.images[0]
     var autumnBackground = this.state.backgroundColors[0]
     this.setState({themeIcon:autumn})
@@ -33,35 +32,30 @@ autumnTheme(){
 }
 
 forestTheme(){
-    var images = this.state.images
     var forest = this.state.images[1]
     var forestBackground = this.state.backgroundColors[1]
     this.setState({themeIcon:forest})
     this.setState({themeBackground:forestBackground})
 }
 glacierTheme(){
-    var images = this.state.images
     var glacier = this.state.images[2]
     var glacierBackground = this.state.backgroundColors[2]
     this.setState({themeIcon:glacier})
     this.setState({themeBackground:glacierBackground})
 }
 lavenderTheme(){
-    var images = this.state.images
     var lavender = this.state.images[3]
     var lavenderBackground = this.state.backgroundColors[3]
     this.setState({themeIcon:lavender})
     this.setState({themeBackground:lavenderBackground})
 }
 rainbowTheme(){
-    var images = this.state.images
     var rainbow = this.state.images[4]
     var rainbowBackground = this.state.backgroundColors[4]
     this.setState({themeIcon:rainbow})
     this.setState({themeBackground:rainbowBackground})
 }
 defaultTheme(){
-    var images = this.state.images
     var defaultTheme = this.state.images[5]
     var defaultBackground = this.state.backgroundColors[5]
     this.setState({themeIcon:defaultTheme})
