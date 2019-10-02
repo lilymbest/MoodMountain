@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Route, Switch, Link } from 'react-router-dom';
-import Home from '../Home/Home'
+import ThemeColors from '../ThemeColors/ThemeColors'
 
 
 class App extends Component {
@@ -38,14 +38,14 @@ class App extends Component {
           />
           <input type="submit" />
 			<div>
-      <Link className='btnHome' to='/home'>Home</Link>
-				<button>Make change</button>
+      <header className='header-footer'>Set Difficulty Level</header>
+      <Link className='btnTheme' to='/themecolors'>Change Look</Link>
 			</div>
         </form>
         </>
       } />
-        <Route exact path='/home' render={() => 
-          <Home />
+        <Route exact path='/themecolors' render={() => 
+          <ThemeColors />
           } />
           
       </div>

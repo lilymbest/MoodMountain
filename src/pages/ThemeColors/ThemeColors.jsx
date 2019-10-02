@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import './Home.css'
-import ''
+import './ThemeColors.css'
 
-class Home extends Component{
+class Theme extends Component{
     constructor(props){
         super(props)
 
@@ -63,7 +62,6 @@ defaultTheme(){
     this.setState({themeBackground:defaultBackground})
 }
 
-
 handleClickAutumn(){
     this.autumnTheme()
 }
@@ -91,17 +89,40 @@ handleClickDefault(){
 
 render() {
     return (
-    <div className="home" style={{background: this.state.themeBackground}}>
+    <div className="theme" style={{background: this.state.themeBackground}}>
         <img src={this.state.themeIcon} alt=""/>
-        <button onClick={() => this.handleClickAutumn()}><img className="btn" src="images/autumnthemeicon.png" /></button>
-        <button onClick={() => this.handleClickForest()}><img className="btn" src="images/forestthemeicon.png" /></button>
-        <button onClick={() => this.handleClickGlacier()}><img className="btn" src="images/glacierthemeicon.png" /></button>
-        <button onClick={() => this.handleClickLavender()}><img className="btn" src="images/lavenderthemeicon.png" /></button>
-        <button onClick={() => this.handleClickRainbow()}><img className="btn" src="images/rainbowthemeicon.png" /></button>
-        <button onClick={() => this.handleClickDefault()}><img className="btn" src="images/MoodMountain.png" /></button>
+        <h2>Select A Theme:</h2>
+        <div className="themeSelections1">
+        <div>
+            <button onClick={() => this.handleClickAutumn()}><img className="btn" src="images/autumnthemeicon.png" alt="" /></button>
+            <h3>Autumn</h3>
+        </div>    
+        <div>
+            <button onClick={() => this.handleClickForest()}><img className="btn" src="images/forestthemeicon.png" alt="" /></button>
+            <h3>Forest</h3>
+        </div> 
+        <div>
+            <button onClick={() => this.handleClickGlacier()}><img className="btn" src="images/glacierthemeicon.png"  alt="" /></button>
+            <h3>Glacier</h3>
+        </div> 
+        </div>
+        <div className="themeSelections2">
+        <div>
+            <button onClick={() => this.handleClickLavender()}><img className="btn" src="images/lavenderthemeicon.png" alt="" /></button>
+            <h3>Lavender</h3>
+        </div> 
+        <div>
+            <button onClick={() => this.handleClickRainbow()}><img className="btn" src="images/rainbowthemeicon.png" alt="" /></button>
+            <h3>Rainbow</h3>
+        </div> 
+        <div>
+            <button onClick={() => this.handleClickDefault()}><img className="btn" src="images/MoodMountain.png"alt="" /></button>
+            <h3>Sunset</h3>
+        </div> 
+        </div>
     </div>
     )
     }
 }
 
-export default Home
+export default Theme
