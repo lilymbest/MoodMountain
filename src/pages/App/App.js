@@ -28,7 +28,7 @@ class App extends Component {
       <div className="App">
       <Route exact path='/' render={() =>
       <>
-        <ul>{this.state.moods}</ul>
+        <ul>{this.state.moods.map(e => e.split(' ').map(f => <span> {f} </span>))}</ul>
         <form className="add-form">
           <input 
           type="text" 
