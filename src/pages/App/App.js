@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './MoodInput.css';
 import { Route, Switch, Link } from 'react-router-dom';
 import ThemeColors from '../ThemeColors/ThemeColors'
 
