@@ -1,0 +1,22 @@
+<<<<<<< HEAD
+=======
+
+.App {
+  text-align: center;
+  font-family: 'Barlow', sans-serif;
+  font-size: 10px;
+  color: white;
+}
+
+.btnHome{
+  font-family: 'Barlow', sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+}
+
+>>>>>>> master

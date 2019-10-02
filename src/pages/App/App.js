@@ -30,10 +30,10 @@ class App extends Component {
       <>
         <header className='feelingToday'>How are you feeling today?</header>
 
-        <div className="moods">{this.state.moods}</div>
+        <ul>{this.state.moods.map(e => e.split(' ').map(f => <span> {f} </span>))}</ul>
 
-        <form>
-          <input className="inputField"
+        <form className="add-form">
+        <input className="inputField"
           type="text" 
           onChange={this.handleOnChange} 
           value={this.state.moodInput} 
@@ -41,6 +41,7 @@ class App extends Component {
           />
           <input type="submit" />
           </form>
+
 			<div>
 
       <Link className='btnTheme' to='/themecolors'>Change Theme</Link>
