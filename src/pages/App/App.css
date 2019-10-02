@@ -1,12 +1,24 @@
+#moods {
+  font-size: 30px;
+  margin: 30px;
+}
+
+element.style {
+  height: 100%
+}
+
 .App {
   text-align: center;
+  height: 100%;
 }
 
 .App-logo {
   height: 40vmin;
+  margin: 30px;
 }
 
 .App-header {
+  font-family: 'Barlow', sans-serif;
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -15,8 +27,50 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+
 }
 
 .App-link {
   color: #09d3ac;
+}
+
+
+.changeTheme {
+  color: purple;
+  font-size: 20px;
+}
+
+
+@media (max-width: 549px) {
+  body {
+    background-color: #ffffff;
+  }
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+  body {
+    background-color: #ffffff;
+  }
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+  body {
+    background-color: #ffffff;
+  }
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+  body {
+    background-color: #ffffff;
+  }
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+  body {
+    background-color: #ffffff;
+  }
 }
