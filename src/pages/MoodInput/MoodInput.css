@@ -68,7 +68,7 @@ element.style {
   color: white;
 }
 
-.btnTheme {
+.btnMood, .btnTheme {
   font-family: 'Assistant', sans-serif;
   font-size: 6vmin;
   font-style: normal;
@@ -79,7 +79,7 @@ element.style {
   background-color: blue;
   color: white;
   font-size: 20px;
-  margin-top: 300px;
+  margin: 600px, 30px, 30px, 30px;
   padding: 10px;
 }
 

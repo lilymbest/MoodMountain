@@ -1,0 +1,66 @@
+@media (min-width: 300px) {
+  body {
+    background-color: #ffffff;
+  }
+
+  .logo {
+    height: calc(200px + (350 - 200) * ((100vw - 300px) / (1600 - 300)));
+    width: calc(200px + (350 - 200) * ((100vw - 300px) / (1600 - 300)));
+    margin-top: 8em;
+  }
+
+  .auth{
+    text-align: center;
+  }
+
+  .logoName {
+    font-family: 'Barlow', sans-serif;
+    /* font-size: 2em; */
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    font-size: calc(28px + (50 - 28) * ((100vw - 300px) / (1600 - 300)));
+  }
+
+  .logoTagline {
+    font-family: 'Assistant', sans-serif;
+    font-size: calc(22px + (50 - 22) * ((100vw - 300px) / (1600 - 300)));
+    margin: 0;
+  }
+
+  .authBtn {
+    margin-top: 40px;
+    display: inline-flex;
+  }
+
+  .btnSignIn{
+    font-family: 'Assistant', sans-serif;
+    font-size: calc(22px + (50 - 22) * ((100vw - 300px) / (1600 - 300)));
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: normal;
+    text-decoration: none;
+    text-align: center;
+    background-color: #B8B3E9;
+    color: white;
+    padding: 15px;
+    height: calc(35px + (60 - 35) * ((100vw - 300px) / (1600 - 300)));
+    width: auto;
+    margin-right: 10px;
+  }
+
+  .btnSignUp {
+    font-family: 'Assistant', sans-serif;
+    font-size: calc(22px + (50 - 22) * ((100vw - 300px) / (1600 - 300)));
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: normal;
+    text-decoration: none;
+    text-align: center;
+    background-color: #B8B3E9;
+    color: white;
+    padding: 15px;
+    height: calc(35px + (60 - 35) * ((100vw - 300px) / (1600 - 300)));
+    width: auto;
+    margin-left: 10px;
+  }
+}

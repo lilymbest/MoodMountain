@@ -10,17 +10,22 @@ class App extends Component {
     return (
       <Switch>
          
-      <div className="App">
+      <div className="auth">
       <Route exact path='/' render={() =>
         <>
-        <header className='feelingToday'>How are you feeling today?</header>
-        <div>
-        <Link className='btnTheme' to='/MoodInput'>Add Mood</Link>
-        <Link className='btnTheme' to='/ThemeColors'>Change Theme</Link>
+        <img className="logo" alt="logo" src="images/MoodMountain.png" />
+        <h1 className="logoName">MOOD MOUNTAIN</h1>
+        <h2 className="logoTagline">Emotional Tracking</h2>
+        
+        <div className="authBtn">
+          <Link className='btnSignIn' to='/MoodInput'>Sign In</Link>
+          <Link className='btnSignUp' to='/ThemeColors'>Sign Up</Link>
         </div>
+
+
           </>
       } />
-      
+
         <Route exact path='/MoodInput' render={() => 
         <MoodInput />
           } />
