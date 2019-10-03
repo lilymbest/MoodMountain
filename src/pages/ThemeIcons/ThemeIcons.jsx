@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './ThemeColors.css'
+import './ThemeIcons.css'
 
 class Theme extends Component{
     constructor(props){
