@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './ThemeColors.css'
+import MoodIcons from '../../components/MoodIcons/MoodIcons'
 
 class Theme extends Component{
     constructor(props){
@@ -15,7 +16,12 @@ class Theme extends Component{
             ],
     backgroundColors: ['#C32F27', '#646165', '#0E6BA8', '#DDCAD9', '#9BC53D', '#75F4F4'],
     themeIcon: 'images/MoodMountain.png',
-    themeBackground: '#75F4F4'
+    themeBackground: '#75F4F4',
+    euphoricIcon: 'images/Icons/Default/euphoricDefault2.png',
+    happyIcon: 'images/Icons/Default/happyDefault.png',
+    neutralIcon: 'images/Icons/Default/neutralDefault.png',
+    tenseIcon: 'images/Icons/Default/tenseDefault.png',
+    sadIcon: 'images/Icons/Default/zsadDefault.png',
     }
     this.autumnTheme = this.autumnTheme.bind(this)
     this.forestTheme = this.forestTheme.bind(this)
@@ -24,24 +30,48 @@ class Theme extends Component{
     this.rainbowTheme = this.rainbowTheme.bind(this)
     this.defaultTheme = this.defaultTheme.bind(this)
 }
+
+
+
 autumnTheme(){
+    var autumnEphoricIcon = 'images/Icons/Autumn/euphoricAutumn.png'
+    var autumnHappyIcon = 'images/Icons/Autumn/happyAutumn.png'
+    var autumnNeutralIcon = 'images/Icons/Autumn/neutralAutumn.png'
+    var autumnTenseIcon = 'images/Icons/Autumn/tenseAutumn.png'
+    var autumnSadIcon = 'images/Icons/Autumn/zsadAutumn.png'
     var autumn = this.state.images[0]
     var autumnBackground = this.state.backgroundColors[0]
     this.setState({themeIcon:autumn})
     this.setState({themeBackground:autumnBackground})
+    this.setState({euphoricIcon: autumnEphoricIcon})
+    this.setState({happyIcon: autumnHappyIcon})
+    this.setState({neutralIcon: autumnNeutralIcon})
+    this.setState({tenseIcon: autumnTenseIcon})
+    this.setState({sadIcon: autumnSadIcon})
 }
 
 forestTheme(){
+    var forestEphoricIcon = 'images/Icons/Forest/euphoricForest.png'
+    var forestHappyIcon = 'images/Icons/Forest/happyForest.png'
+    var forestNeutralIcon = 'images/Icons/Forest/neutralForest.png'
+    var forestTenseIcon = 'images/Icons/Forest/tenseForest.png'
+    var forestSadIcon = 'images/Icons/Forest/zsadForest.png'
     var forest = this.state.images[1]
     var forestBackground = this.state.backgroundColors[1]
     this.setState({themeIcon:forest})
     this.setState({themeBackground:forestBackground})
+    this.setState({euphoricIcon: forestEphoricIcon})
+    this.setState({happyIcon: forestHappyIcon})
+    this.setState({neutralIcon: forestNeutralIcon})
+    this.setState({tenseIcon: forestTenseIcon})
+    this.setState({sadIcon: forestSadIcon})
 }
 glacierTheme(){
     var glacier = this.state.images[2]
     var glacierBackground = this.state.backgroundColors[2]
     this.setState({themeIcon:glacier})
     this.setState({themeBackground:glacierBackground})
+
 }
 lavenderTheme(){
     var lavender = this.state.images[3]
@@ -90,6 +120,7 @@ handleClickDefault(){
 render() {
     return (
     <div className="theme" style={{background: this.state.themeBackground}}>
+        <a  href="/"><img src="images/back.png" className="back" alt=""/></a>
         <img src={this.state.themeIcon} alt=""/>
         <h2>Select A Theme:</h2>
         <div className="themeSelections1">
@@ -120,9 +151,10 @@ render() {
             <h3>Sunset</h3>
         </div> 
         </div>
+        <MoodIcons />
     </div>
     )
-    }
+}
 }
 
 export default Theme
