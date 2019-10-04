@@ -1,21 +1,18 @@
 .feelingToday {
   font-family: 'Barlow', sans-serif;
-  font-size: 5vmin;
+  font-size: calc(28px + (50 - 28) * ((100vw - 300px) / (1600 - 300)));
+  letter-spacing: 1px;
+  margin-bottom: 5px;
   font-style: normal;
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: normal;
   text-decoration: none;
   text-align: center;
-  margin-top: 60px;
-  margin-left: 0;
-  margin-right: 0;
-  /* margin: 40px 100px 100px 100px; */
-  /* padding: 20px; */
-  background-color: #09d3ac;
+  margin-top: 6em;
 }
 
-#moods {
+.moodSelector {
   font-family: 'Assistant', sans-serif;
   font-size: 30px;
   font-style: normal;
@@ -23,50 +20,13 @@
   letter-spacing: normal;
   text-decoration: none;
   text-align: center;
-  margin: 30px;
+  display: inline;
 }
 
 element.style {
   height: 100%
 }
 
-/* .App-logo {
-  height: 40vmin;
-  margin: 30px;
-}
-
-.App-header {
-  font-family: 'Barlow', sans-serif;
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: purple;
-}
-
-.App-link {
-  color: #09d3ac;
-} */
-
-
-.App {
-  text-align: center;
-  font-family: 'Assistant', sans-serif;
-}
-
-.btnHome{
-  font-family: 'Assistant', sans-serif;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  text-align: center;
-  color: white;
-}
 
 .btnMood, .btnTheme {
   font-family: 'Assistant', sans-serif;

@@ -28,24 +28,36 @@ class App extends Component {
       <div className="App">
       <Route exact path='/MoodInput' render={() =>
       <>
-        <header className='feelingToday'>How are you feeling today?</header>
+        <header className='feelingToday'>How are you today?</header>
 
-        <ul>{this.state.moods.map(e => e.split(' ').map(f => <span> {f} </span>))}</ul>
+        <div className="moodSelector">
+          <div>
+              <button onClick={() => this.handleClickEuphoric()}><img className="btn" src="images/.png" /></button>
+              <h3>{this.state.moods[0]}</h3>
+          </div> 
+          <div>
+              <button onClick={() => this.handleClickElevated()}><img className="btn" src="images/.png" /></button>
+              <h3>{this.state.moods[1]}</h3>
+          </div> 
+          <div>
+              <button onClick={() => this.handleClickNeutral()}><img className="btn" src="images/.png" /></button>
+              <h3>{this.state.moods[2]}</h3>
+          </div> 
+          <div>
+              <button onClick={() => this.handleClickTense()}><img className="btn" src="images/.png" /></button>
+              <h3>{this.state.moods[3]}</h3>
+          </div> 
+          <div>
+              <button onClick={() => this.handleClickLow()}><img className="btn" src="images/.png" /></button>
+              <h3>{this.state.moods[4]}</h3>
+          </div> 
+        </div>
 
-        <form className="add-form">
-        <input className="inputField"
-          type="text" 
-          onChange={this.handleOnChange} 
-          value={this.state.moodInput} 
-          autoComplete="off" 
-          />
-          <input type="submit" />
-          </form>
 
-			<div>
-
-      <Link className='btnTheme' to='/themecolors'>Change Theme</Link>
-			</div>
+      <div className="authBtn">
+          <Link className='btnSignIn' to='/MoodInput'>Add Mood</Link>
+          <Link className='btnSignUp' to='/ThemeColors'>Change Theme</Link>
+        </div>
 
         </>
       } />
