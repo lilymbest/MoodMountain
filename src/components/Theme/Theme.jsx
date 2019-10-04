@@ -1,18 +1,14 @@
-import React from 'react'
+import React, { Component } from 'react'
 import MoodIcons from '../MoodIcons/MoodIcons'
 
-const Theme = (props) => (
+class Theme extends Component{
+    render(){
+    return(
     <div className="theme">
-    <MoodIcons 
-        euphoricIcon={this.state.euphoricIcon}
-        happyIcon={this.state.happyIcon}
-        neutralIcon={this.state.neutralIcon}
-        tenseIcon={this.state.tenseIcon}
-        sadIcon={this.state.sadIcon}
-    />
-    <button onClick={() => props.handleClickDefault()}></button>
+    <img src={this.props.themeIcon} alt=""/>
     </div>
-    
-)
+    )
+}
+}
 
 export default Theme

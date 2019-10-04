@@ -4,6 +4,7 @@ import { Route, Switch, Link } from 'react-router-dom';
 import ThemeColors from '../ThemeColors/ThemeColors'
 import MoodIcons from '../../components/MoodIcons/MoodIcons'
 import { directive } from '@babel/types';
+import Theme from '../../components/Theme/Theme'
 
 
 class App extends Component {
@@ -18,7 +19,7 @@ class App extends Component {
               'images/MoodMountain.png'
               ],
       backgroundColors: ['#C32F27', '#646165', '#0E6BA8', '#DDCAD9', '#9BC53D', '#75F4F4'],
-      themeIcon: 'images/MoodMountain.png',
+      themeIcon: '',
       themeBackground: '#75F4F4',
       euphoricIcon: 'images/Icons/Default/euphoricDefault2.png',
       happyIcon: 'images/Icons/Default/happyDefault.png',
@@ -125,6 +126,10 @@ handleClickDefault(){
         <a href="/howareyou">How You feelin?</a>
         <Switch>
         <Route exact path='/howareyou' render={() =>
+        <>
+        <Theme 
+        themeIcon={this.state.themeIcon}
+        />
         <MoodIcons
         euphoricIcon={this.state.euphoricIcon}
         happyIcon={this.state.happyIcon}
@@ -133,8 +138,17 @@ handleClickDefault(){
         sadIcon={this.state.sadIcon}
         handleClickAutumn={this.handleClickAutumn}
         />
+        </>
         } />
         </Switch>
+        <div>
+            <button onClick={() => this.handleClickAutumn()}><img className="btn" src="images/autumnthemeicon.png" alt="" /></button>
+            <h3>Autumn</h3>
+        </div>    
+        <div>
+            <button onClick={() => this.handleClickForest()}><img className="btn" src="images/forestthemeicon.png" alt="" /></button>
+            <h3>Forest</h3>
+        </div> 
       </div>
     )
   }
