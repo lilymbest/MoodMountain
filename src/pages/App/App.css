@@ -1,119 +1,66 @@
-.feelingToday {
-  font-family: 'Barlow', sans-serif;
-  font-size: 5vmin;
-  font-style: normal;
-  font-weight: normal;
-  text-transform: uppercase;
-  letter-spacing: normal;
-  text-decoration: none;
-  text-align: center;
-  margin-top: 60px;
-  margin-left: 0;
-  margin-right: 0;
-  /* margin: 40px 100px 100px 100px; */
-  /* padding: 20px; */
-  background-color: #09d3ac;
-}
-
-#moods {
-  font-family: 'Assistant', sans-serif;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  text-align: center;
-  margin: 30px;
-}
-
-element.style {
-  height: 100%
-}
-
-/* .App-logo {
-  height: 40vmin;
-  margin: 30px;
-}
-
-.App-header {
-  font-family: 'Barlow', sans-serif;
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: purple;
-}
-
-.App-link {
-  color: #09d3ac;
-} */
-
-
-.App {
-  text-align: center;
-  font-family: 'Assistant', sans-serif;
-}
-
-.btnHome{
-  font-family: 'Assistant', sans-serif;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  text-align: center;
-  color: white;
-}
-
-.btnTheme {
-  font-family: 'Assistant', sans-serif;
-  font-size: 6vmin;
-  font-style: normal;
-  font-weight: bold;
-  letter-spacing: normal;
-  text-decoration: none;
-  text-align: center;
-  background-color: blue;
-  color: white;
-  font-size: 20px;
-  margin-top: 300px;
-  padding: 10px;
-}
-
-
 @media (min-width: 300px) {
   body {
     background-color: #ffffff;
   }
-}
 
-/* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {
-  body {
-    background-color: #ffffff;
+  .logo {
+    height: calc(200px + (350 - 200) * ((100vw - 300px) / (1600 - 300)));
+    width: calc(200px + (350 - 200) * ((100vw - 300px) / (1600 - 300)));
+    margin-top: 8em;
   }
-}
 
-/* Larger than tablet */
-@media (min-width: 750px) {
-  body {
-    background-color: #ffffff;
+  .auth{
+    text-align: center;
   }
-}
 
-/* Larger than desktop */
-@media (min-width: 1000px) {
-  body {
-    background-color: #ffffff;
+  .logoName {
+    font-family: 'Barlow', sans-serif;
+    /* font-size: 2em; */
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    font-size: calc(28px + (50 - 28) * ((100vw - 300px) / (1600 - 300)));
   }
-}
 
-/* Larger than Desktop HD */
-@media (min-width: 1200px) {
-  body {
-    background-color: #ffffff;
+  .logoTagline {
+    font-family: 'Assistant', sans-serif;
+    font-size: calc(22px + (50 - 22) * ((100vw - 300px) / (1600 - 300)));
+    margin: 0;
+  }
+
+  .authBtn {
+    margin-top: 40px;
+    display: inline-flex;
+  }
+
+  .btnSignIn{
+    font-family: 'Assistant', sans-serif;
+    font-size: calc(22px + (50 - 22) * ((100vw - 300px) / (1600 - 300)));
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: normal;
+    text-decoration: none;
+    text-align: center;
+    background-color: #B8B3E9;
+    color: white;
+    padding: 15px;
+    height: calc(35px + (60 - 35) * ((100vw - 300px) / (1600 - 300)));
+    width: auto;
+    margin-left: .75em;
+  }
+
+  .btnSignUp {
+    font-family: 'Assistant', sans-serif;
+    font-size: calc(22px + (50 - 22) * ((100vw - 300px) / (1600 - 300)));
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: normal;
+    text-decoration: none;
+    text-align: center;
+    background-color: #B8B3E9;
+    color: white;
+    padding: 15px;
+    height: calc(35px + (60 - 35) * ((100vw - 300px) / (1600 - 300)));
+    width: auto;
+    margin-left: .75em;
   }
 }
