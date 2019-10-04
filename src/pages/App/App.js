@@ -5,12 +5,17 @@ import ThemeColors from '../ThemeColors/ThemeColors'
 import MoodIcons from '../../components/MoodIcons/MoodIcons'
 import { directive } from '@babel/types';
 import Theme from '../../components/Theme/Theme'
+import userService from '../../utils/userService';
+import Login from '../Login/Login';
+import Signup from '../Signup/Signup'
+import NavBar from '../../components/NavBar/NavBar'
 
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
+      user: userService.getUser(),
       images: ['images/autumnthemeicon.png', 
               'images/forestthemeicon.png', 
               'images/glacierthemeicon.png',
@@ -119,12 +124,34 @@ handleClickDefault(){
     this.defaultTheme()
 }
 
+handleLogout = () => {
+  userService.logout();
+  this.setState({ user: null });
+}
+
+handleSignupOrLogin = () => {
+  this.setState({user: userService.getUser()});
+}
+
   render() {
     return (
       <div className="App">
         <header></header>
+        <NavBar 
+        user={this.state.user}
+        />
         <a href="/howareyou">How You feelin?</a>
         <Switch>
+        <Route exact path='/signup' render={({ history }) => 
+            <Signup
+              handleSignupOrLogin={this.handleSignupOrLogin}
+            />
+          }/>
+          <Route exact path='/login' render={({ history }) => 
+            <Login
+              handleSignupOrLogin={this.handleSignupOrLogin}
+            />
+          }/>
         <Route exact path='/howareyou' render={() =>
         <>
         <Theme 
@@ -141,14 +168,6 @@ handleClickDefault(){
         </>
         } />
         </Switch>
-        <div>
-            <button onClick={() => this.handleClickAutumn()}><img className="btn" src="images/autumnthemeicon.png" alt="" /></button>
-            <h3>Autumn</h3>
-        </div>    
-        <div>
-            <button onClick={() => this.handleClickForest()}><img className="btn" src="images/forestthemeicon.png" alt="" /></button>
-            <h3>Forest</h3>
-        </div> 
       </div>
     )
   }
