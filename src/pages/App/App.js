@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Route, Switch, Link } from 'react-router-dom';
-import ThemeColors from '../ThemeColors/ThemeColors'
+import ThemeColors from '../Settings/Settins'
 import MoodIcons from '../../components/MoodIcons/MoodIcons'
 import { directive } from '@babel/types';
 import Theme from '../../components/Theme/Theme'
 import userService from '../../utils/userService';
 import Login from '../Login/Login';
 import Signup from '../Signup/Signup'
-import NavBar from '../../components/NavBar/NavBar'
+import NavBarTop from '../../components/NavBarTop/NavBarTop'
+import NavBarBottom from '../../components/NavBarBottom/NavBarBottom'
 
 
 class App extends Component {
@@ -137,7 +138,7 @@ handleSignupOrLogin = () => {
     return (
       <div className="App">
         <header></header>
-        <NavBar 
+        <NavBarTop
         user={this.state.user}
         />
         <a href="/howareyou">How You feelin?</a>
@@ -168,6 +169,7 @@ handleSignupOrLogin = () => {
         </>
         } />
         </Switch>
+        <NavBarBottom />
       </div>
     )
   }

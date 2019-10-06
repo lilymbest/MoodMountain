@@ -3,15 +3,16 @@ import { Link } from 'react-router-dom';
 
 
 
-const NavBar = (props) => {
+
+const NavBarTop = (props) => {
     let nav = props.user ?
-      <div>
+      <div className="nav-logout" style={{backgroundColor: '#D17B88'}}>
         <Link to='' className='NavBar-link'>LOG OUT</Link>
         &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-        <span className='NavBar-welcome'>WELCOME, {props.user.name}</span>
+        
       </div>
       :
-      <div>
+      <div className="top-nav" style={{backgroundColor: '#D17B88'}}>
         <Link to='/login' className='NavBar-link'>LOG IN</Link>
         &nbsp;&nbsp;|&nbsp;&nbsp;
         <Link to='/signup' className='NavBar-link'>SIGN UP</Link>
@@ -25,4 +26,4 @@ const NavBar = (props) => {
   };
 
 
-export default NavBar;
+export default NavBarTop;
