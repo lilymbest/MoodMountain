@@ -10,6 +10,7 @@ import Login from '../Login/Login';
 import Signup from '../Signup/Signup'
 import NavBarTop from '../../components/NavBarTop/NavBarTop'
 import NavBarBottom from '../../components/NavBarBottom/NavBarBottom'
+import Dashboard from '../Dashboard/Dashboard'
 
 
 class App extends Component {
@@ -143,6 +144,7 @@ handleSignupOrLogin = () => {
         />
         <a href="/howareyou">How You feelin?</a>
         <Switch>
+        <Route exact path='/dashboard' render={() => <Dashboard /> } />
         <Route exact path='/signup' render={({ history }) => 
             <Signup
               handleSignupOrLogin={this.handleSignupOrLogin}
