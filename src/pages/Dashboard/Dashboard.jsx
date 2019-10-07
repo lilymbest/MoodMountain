@@ -10,28 +10,30 @@ class DonutChart extends React.Component {
     super(props);
     this.state = {
         options: {
+        labels: ["Euphoric", "Happy", "Neutral", "Tense", "Sad"],
+        colors: ["#D17B88", "#D999B9", "#B8B3E9", "#90E0F3", "#75F4F4"],
           responsive: [{
             breakpoint: 480,
             options: {
               chart: {
-                width: 200
+                width: 200,
+                type: DonutChart,
               },
-
               legend: {
-                position: 'bottom'
+                position: 'bottom',
+                
               }
             }
           }]
         },
-        series: [44, 55, 41, 17, 15]
-      }
+        series: [23, 11, 54, 72, 12]
     }
-
-    render() {
-      return (
-        <div>
-          <div className="chart">
-          <ReactApexChart labels={this.state.labels} options={this.state.options} series={this.state.series} type="donut" width="380" />
+}
+render() {
+    return (
+    <div>
+        <div className="chart">
+          <ReactApexChart options={this.state.options} series={this.state.series} type="donut" width="380" />
           </div>
           <div id="html-dist">
           </div>

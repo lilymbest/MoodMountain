@@ -152,7 +152,7 @@ handleSignupOrLogin = () => {
           }/>
           <Route exact path='/login' render={({ history }) => 
             <Login
-              handleSignupOrLogin={this.handleSignupOrLogin}
+              handashboarddleSignupOrLogin={this.handleSignupOrLogin}
             />
           }/>
         <Route exact path='/howareyou' render={() =>
