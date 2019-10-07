@@ -44,7 +44,6 @@
     padding: 15px;
     height: calc(35px + (60 - 35) * ((100vw - 300px) / (1600 - 300)));
     width: auto;
-    margin-left: .75em;
   }
 
   .btnSignUp {

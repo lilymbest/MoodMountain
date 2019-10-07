@@ -20,10 +20,9 @@ const NavBarTop = (props) => {
   
     return (
       <div className='NavBar' style={{backgroundColor: '#D17B88'}}>
-        <Link to='/login' className='NavBar-link'>LOG IN</Link>
+        <Link to='/login' className='NavBar-link'>SIGN IN</Link>
         <Link to='/landing'><img src="images/MoodMountain.png" alt=""/></Link>
         <Link to='/signup' className='NavBar-link'>SIGN UP</Link>
-        
       </div>
     );
   };
