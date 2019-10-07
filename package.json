@@ -5,6 +5,7 @@
   "dependencies": {
     "apexcharts": "^3.8.6",
     "bcrypt": "^3.0.6",
+    "canvasjs": "^1.8.1",
     "dotenv": "^8.1.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",

@@ -16,14 +16,14 @@ class DonutChart extends React.Component {
               chart: {
                 width: 200
               },
+
               legend: {
                 position: 'bottom'
               }
             }
           }]
         },
-        series: [44, 55, 41, 17, 15],
-        labels: ['Euphoric', 'Happy', 'Neutral', 'Tense', 'Sad'],
+        series: [44, 55, 41, 17, 15]
       }
     }
 
