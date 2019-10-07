@@ -1,22 +1,30 @@
-a {
-    text-decoration: none;
-}
+@media (min-width: 300px) {
+    a {
+        text-decoration: none;
+    }
 
-.NavBarBtm {    
-    display: inline;
-    justify-content: center;
-    text-align: center;
-}
+    .appIcon_first {
+        width: 12%;
+        height: 12%;
+        margin: 10px 10px 10px 30px;
+    }
 
-.appIcon {
-    width: 5%;
-    height: 5%;
-    margin: 10px;
-}
+    .appIcon_last {
+        width: 12%;
+        height: 12%;
+        margin: 10px 20px 10px 10px;
+    }
 
-.appIconCenter {
-    width: 8%;
-    height: 8%;
-    margin: 0 10px 10px 10px;
-    padding-bottom: 15px;
-}
+    .appIcon {
+        width: 12%;
+        height: 12%;
+        margin: 10px;
+    }
+
+    .appIconCenter {
+        width: 16%;
+        height: 16%;
+        background-color: white;
+        border-radius: 50%;
+    }
+    }
