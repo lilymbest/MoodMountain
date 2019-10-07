@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './ThemeColors.css'
+import './Settings.css'
 import MoodIcons from '../../components/MoodIcons/MoodIcons'
 
 class Theme extends Component{
