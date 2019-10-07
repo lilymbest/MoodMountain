@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
+import './Dashboard.css';
 import ReactApexChart from 'react-apexcharts'
 import ApexCharts from 'apexcharts'
 import NavBarTop from '../../components/NavBarTop/NavBarTop'
@@ -40,7 +41,7 @@ handleNextClick(){
 render() {
     return (
     <div>
-        <div className="chart">
+        <div className="moodChart">
         <button onClick={() => this.handleLastClick()}>Last Month</button><h1>{this.state.month}</h1><button onClick={() => this.handleNextClick()}>Next Month</button>
           <ReactApexChart options={this.state.options} series={this.state.series} type="donut" width="380" />
           </div>
