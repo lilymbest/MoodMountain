@@ -1,9 +1,10 @@
+.NavBar {
+    display: flex;
+    justify-content: center;
+}
+
+
 a {
     text-decoration: none;
     color: black;
-}
-
-img {
-    height: 100px;
-    width: 100px;
 }
