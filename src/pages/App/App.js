@@ -11,7 +11,6 @@ import Settings from '../Settings/Settings'
 
 import './App.css';
 import { Route, Switch, Link } from 'react-router-dom';
-import ThemeColors from '../Settings/Settings'
 import MoodIcons from '../../components/MoodIcons/MoodIcons'
 import { directive, tsImportEqualsDeclaration } from '@babel/types';
 import Theme from '../../components/Theme/Theme'
