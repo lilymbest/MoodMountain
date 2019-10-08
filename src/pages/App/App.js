@@ -16,7 +16,7 @@ import { directive } from '@babel/types';
 import Theme from '../../components/Theme/Theme';
 import userService from '../../utils/userService';
 import Login from '../Login/Login';
-import Signup from '../Signup/Signup';
+import SignUp from '../SignUp/SignUp';
 import MoodMountain from '../../components/MoodMountain/MoodMountain';
 import Landing from '../Landing/Landing';
 import Calendar from '../Calendar/Calendar';
@@ -156,13 +156,15 @@ handleSignupOrLogin = () => {
         user={this.state.user}
         handleLogout={this.handleLogout}
         />
+
         <Switch>
+
         <Route exact path='/landing' render={() => <Landing /> } />
         <Route exact path='/calendar' render={() => <Calendar /> } />
         <Route exact path='/settings' render={() => <Settings /> } />
         <Route exact path='/dashboard' render={() => <Dashboard /> } />
         <Route exact path='/signup' render={({ history }) => 
-            <Signup
+            <SignUp
               history={history}
               handleSignupOrLogin={this.handleSignupOrLogin}
             />

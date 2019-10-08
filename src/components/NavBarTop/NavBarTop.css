@@ -3,8 +3,26 @@
     justify-content: center;
 }
 
-
 a {
     text-decoration: none;
     color: black;
+}
+
+.NavBarWelcome {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.logoImage {
+    display: flex;
+    justify-content: center;
+}
+
+.NavBarWelcome, .NavBarLogOut,
+.NavBarSignIn, .NavBarSignUp {
+    text-align: center;
+    display: inline;
+    padding: 100px;
 }
