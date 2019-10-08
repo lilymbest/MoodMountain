@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 /* Components */
 import NavBarTop from '../../components/NavBarTop/NavBarTop'
-
 import NavBarBottom from '../../components/NavBarBottom/NavBarBottom'
 
 /* Pages */
@@ -21,6 +20,8 @@ import Signup from '../Signup/Signup';
 import MoodMountain from '../../components/MoodMountain/MoodMountain';
 import Landing from '../Landing/Landing';
 import Calendar from '../Calendar/Calendar';
+
+
 
 class App extends Component {
   constructor() {
