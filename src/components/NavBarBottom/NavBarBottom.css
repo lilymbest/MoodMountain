@@ -4,21 +4,24 @@
     }
 
     .appIcon_first {
-        width: 12%;
-        height: 12%;
-        margin: 10px 10px 10px 30px;
+        width: 10%;
+        height: 10%;
+        margin: 10px 10px 10px 50px;
     }
 
     .appIcon_last {
-        width: 12%;
-        height: 12%;
+        width: 10%;
+        height: 10%;
         margin: 10px 20px 10px 10px;
     }
 
     .appIcon {
-        width: 12%;
-        height: 12%;
+        width: 10%;
+        height: 10%;
         margin: 10px;
+        display: inline;
+        justify-content: center;
+        align-items: center;
     }
 
     .appIconCenter {
@@ -27,4 +30,5 @@
         background-color: white;
         border-radius: 50%;
     }
-    }
+
+}

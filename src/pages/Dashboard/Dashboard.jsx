@@ -42,7 +42,15 @@ render() {
     return (
     <div>
         <div className="moodChart">
-        <button onClick={() => this.handleLastClick()}>Last Month</button><h1>{this.state.month}</h1><button onClick={() => this.handleNextClick()}>Next Month</button>
+        
+        <button onClick={() => this.handleLastClick()}>Last Month</button>
+        <button onClick={() => this.handleLastClick()}> <img className="arrows" src="images/appIcons/black_arrow_left.svg"></img></button>
+
+        <h1>{this.state.month}</h1>
+        
+        <button onClick={() => this.handleNextClick()}>Next Month</button>
+        <button onClick={() => this.handleNextClick()}> <img className="arrows" src="images/appIcons/black_arrow_right.svg"></img></button>
+
           <ReactApexChart options={this.state.options} series={this.state.series} type="donut" width="380" />
           </div>
           <div id="html-dist">

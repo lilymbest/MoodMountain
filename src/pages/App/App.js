@@ -142,7 +142,7 @@ handleSignupOrLogin = () => {
         <NavBarTop
         user={this.state.user}
         />
-        <a href="/howareyou">How You feelin?</a>
+        {/* <a href="/howareyou">How You feelin?</a> */}
         <Switch>
         <Route exact path='/dashboard' render={() => <Dashboard /> } />
         <Route exact path='/signup' render={({ history }) => 
