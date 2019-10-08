@@ -1,34 +1,20 @@
-@media (min-width: 300px) {
-    a {
-        text-decoration: none;
-    }
-
-    .appIcon_first {
-        width: 10%;
-        height: 10%;
-        margin: 10px 10px 10px 50px;
-    }
-
-    .appIcon_last {
-        width: 10%;
-        height: 10%;
-        margin: 10px 20px 10px 10px;
-    }
-
-    .appIcon {
-        width: 10%;
-        height: 10%;
-        margin: 10px;
-        display: inline;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .appIconCenter {
-        width: 16%;
-        height: 16%;
-        background-color: white;
-        border-radius: 50%;
-    }
-
+.NavBarBtm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.appIcon {
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.appIconCenter {
+    background-color: white;
+    border-radius: 55%;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+}
+
