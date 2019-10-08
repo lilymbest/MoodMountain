@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
+import './Dashboard.css';
 import ReactApexChart from 'react-apexcharts'
 import ApexCharts from 'apexcharts'
 import NavBarTop from '../../components/NavBarTop/NavBarTop'
@@ -41,13 +42,17 @@ handleNextClick(){
 render() {
     return (
     <div>
-        <div className="chart">
-        <button onClick={() => this.handleLastClick()}>Last Month</button><h1>{this.state.month}</h1><button onClick={() => this.handleNextClick()}>Next Month</button>
-          <ReactApexChart options={this.state.options} series={this.state.series} type="donut" width="380" />
-          </div>
-          <div id="html-dist">
-          </div>
+      <div className="moodChartHeader">
+         <button onClick={() => this.handleLastClick()}> <img className="arrows" src="images/appIcons/black_arrow_left.svg"></img></button>
+         <h1>{this.state.month}</h1>
+         <button onClick={() => this.handleNextClick()}> <img className="arrows" src="images/appIcons/black_arrow_right.svg"></img></button>
+         </div>
+      <div className="moodChart">
+        <ReactApexChart options={this.state.options} series={this.state.series} type="donut" width="380" /> 
+      </div>
+        <div id="html-dist">
         </div>
+    </div>
       );
     }
   }

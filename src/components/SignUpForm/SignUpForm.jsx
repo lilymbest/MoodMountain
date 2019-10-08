@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import './SignUpForm.css';
 import userService from '../../utils/userService';
 
 class SignupForm extends Component {
@@ -180,7 +181,7 @@ handleSubmit = async (e) => {
 
   render() {
     return (
-      <div>
+      <div className="signUpForm">
         <header className="header-footer">Sign Up</header>
         <form className="form-horizontal" onSubmit={this.handleSubmit} >
           <div className="form-group">

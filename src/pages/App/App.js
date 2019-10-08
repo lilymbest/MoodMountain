@@ -11,15 +11,22 @@ import Settings from '../Settings/Settings'
 
 import './App.css';
 import { Route, Switch, Link } from 'react-router-dom';
-import ThemeColors from '../Settings/Settins'
+import ThemeColors from '../Settings/Settings'
 import MoodIcons from '../../components/MoodIcons/MoodIcons'
 import { directive, tsImportEqualsDeclaration } from '@babel/types';
 import Theme from '../../components/Theme/Theme'
 import userService from '../../utils/userService';
 import Login from '../Login/Login';
+<<<<<<< HEAD
 import Signup from '../Signup/Signup'
 
 
+=======
+import Signup from '../SignUp/SignUp'
+import NavBarTop from '../../components/NavBarTop/NavBarTop'
+import NavBarBottom from '../../components/NavBarBottom/NavBarBottom'
+import Dashboard from '../Dashboard/Dashboard'
+>>>>>>> 41eaf62f8c13b821d2f8078f463d54dff0b1bc58
 
 
 class App extends Component {
@@ -155,6 +162,10 @@ handleSignupOrLogin = () => {
         user={this.state.user}
         handleLogout={this.handleLogout}
         />
+<<<<<<< HEAD
+=======
+        {/* <a href="/howareyou">How You feelin?</a> */}
+>>>>>>> 41eaf62f8c13b821d2f8078f463d54dff0b1bc58
         <Switch>
         <Route exact path='/dashboard' render={() => <Dashboard /> } />
         <Route exact path='/signup' render={({ history }) => 
