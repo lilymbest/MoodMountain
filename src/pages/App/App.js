@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Route, Switch, Link } from 'react-router-dom';
-import ThemeColors from '../Settings/Settins'
+import ThemeColors from '../Settings/Settings'
 import MoodIcons from '../../components/MoodIcons/MoodIcons'
 import { directive } from '@babel/types';
 import Theme from '../../components/Theme/Theme'
 import userService from '../../utils/userService';
 import Login from '../Login/Login';
-import Signup from '../Signup/Signup'
+import Signup from '../SignUp/SignUp'
 import NavBarTop from '../../components/NavBarTop/NavBarTop'
 import NavBarBottom from '../../components/NavBarBottom/NavBarBottom'
 import Dashboard from '../Dashboard/Dashboard'
@@ -142,7 +142,7 @@ handleSignupOrLogin = () => {
         <NavBarTop
         user={this.state.user}
         />
-        <a href="/howareyou">How You feelin?</a>
+        {/* <a href="/howareyou">How You feelin?</a> */}
         <Switch>
         <Route exact path='/dashboard' render={() => <Dashboard /> } />
         <Route exact path='/signup' render={({ history }) => 

@@ -54,10 +54,7 @@ class App extends Component {
         </div>
 
 
-      <div className="authBtn">
-          <Link className='btnSignIn' to='/MoodInput'>Add Mood</Link>
-          <Link className='btnSignUp' to='/ThemeColors'>Change Theme</Link>
-        </div>
+
 
         </>
       } />
