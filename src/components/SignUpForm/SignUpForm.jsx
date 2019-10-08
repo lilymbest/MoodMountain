@@ -7,6 +7,9 @@ class SignupForm extends Component {
   state = {
     name: '',
     email: '',
+    themeColor: '',
+    themeIcons: '',
+
     password: '',
     passwordConf: ''
   };

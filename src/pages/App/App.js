@@ -1,16 +1,25 @@
+/* Imports */
 import React, { Component } from 'react';
+/* Components */
+import NavBarTop from '../../components/NavBarTop/NavBarTop'
+import NavBarBottom from '../../components/NavBarBottom/NavBarBottom'
+
+/* Pages */
+import Dashboard from '../Dashboard/Dashboard'
+import Settings from '../Settings/Settings'
+/* Styles */
+
 import './App.css';
 import { Route, Switch, Link } from 'react-router-dom';
 import ThemeColors from '../Settings/Settins'
 import MoodIcons from '../../components/MoodIcons/MoodIcons'
-import { directive } from '@babel/types';
+import { directive, tsImportEqualsDeclaration } from '@babel/types';
 import Theme from '../../components/Theme/Theme'
 import userService from '../../utils/userService';
 import Login from '../Login/Login';
 import Signup from '../Signup/Signup'
-import NavBarTop from '../../components/NavBarTop/NavBarTop'
-import NavBarBottom from '../../components/NavBarBottom/NavBarBottom'
-import Dashboard from '../Dashboard/Dashboard'
+
+
 
 
 class App extends Component {
@@ -18,6 +27,7 @@ class App extends Component {
     super()
     this.state = {
       user: userService.getUser(),
+      moods: ['Euphoric', 'Elevated', 'Neutral', 'Tense', 'Low'],
       images: ['images/autumnthemeicon.png', 
               'images/forestthemeicon.png', 
               'images/glacierthemeicon.png',
@@ -41,6 +51,8 @@ class App extends Component {
       this.rainbowTheme = this.rainbowTheme.bind(this)
       this.defaultTheme = this.defaultTheme.bind(this)
       this.handleClickAutumn = this.handleClickAutumn.bind(this)
+      this.handleLogout = this.handleLogout.bind(this)
+      this.handleSignupOrLogin = this.handleSignupOrLogin.bind(this)
   }
   autumnTheme(){
     var autumnEphoricIcon = 'images/Icons/Autumn/euphoricAutumn.png'
@@ -137,22 +149,25 @@ handleSignupOrLogin = () => {
 
   render() {
     return (
-      <div className="App">
+      <div className="App" style={{}}>
         <header></header>
         <NavBarTop
         user={this.state.user}
+        handleLogout={this.handleLogout}
         />
         <a href="/howareyou">How You feelin?</a>
         <Switch>
         <Route exact path='/dashboard' render={() => <Dashboard /> } />
         <Route exact path='/signup' render={({ history }) => 
             <Signup
+              history={history}
               handleSignupOrLogin={this.handleSignupOrLogin}
             />
           }/>
           <Route exact path='/login' render={({ history }) => 
             <Login
-              handashboarddleSignupOrLogin={this.handleSignupOrLogin}
+              history={history}
+              handleSignupOrLogin={this.handleSignupOrLogin}
             />
           }/>
         <Route exact path='/howareyou' render={() =>
