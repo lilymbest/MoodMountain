@@ -11,14 +11,28 @@ import Settings from '../Settings/Settings'
 
 import './App.css';
 import { Route, Switch, Link } from 'react-router-dom';
+<<<<<<< HEAD
 import MoodIcons from '../../components/MoodIcons/MoodIcons'
 import { directive, tsImportEqualsDeclaration } from '@babel/types';
 import Theme from '../../components/Theme/Theme'
+=======
+import ThemeColors from '../Settings/Settings';
+import MoodIcons from '../../components/MoodIcons/MoodIcons';
+import { directive } from '@babel/types';
+import Theme from '../../components/Theme/Theme';
+>>>>>>> e5dcf3cc48bc7fb66cfb80c6af5d1cbea86ed2f6
 import userService from '../../utils/userService';
 import Login from '../Login/Login';
-import Signup from '../Signup/Signup'
-
-
+import Signup from '../SignUp/SignUp';
+import MoodMountain from '../../components/MoodMountain/MoodMountain';
+import NavBarTop from '../../components/NavBarTop/NavBarTop';
+import NavBarBottom from '../../components/NavBarBottom/NavBarBottom';
+import Dashboard from '../Dashboard/Dashboard';
+import Landing from '../Landing/Landing';
+import Calendar from '../Calendar/Calendar';
+import Settings from '../Settings/Settings';
+import MoodIcons from '../../components/MoodIcons/MoodIcons'
+import { directive, tsImportEqualsDeclaration } from '@babel/types';
 
 
 class App extends Component {
@@ -155,6 +169,9 @@ handleSignupOrLogin = () => {
         handleLogout={this.handleLogout}
         />
         <Switch>
+        <Route exact path='/landing' render={() => <Landing /> } />
+        <Route exact path='/calendar' render={() => <Calendar /> } />
+        <Route exact path='/settings' render={() => <Settings /> } />
         <Route exact path='/dashboard' render={() => <Dashboard /> } />
         <Route exact path='/signup' render={({ history }) => 
             <Signup

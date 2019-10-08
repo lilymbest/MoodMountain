@@ -1,12 +1,10 @@
 import React from 'react';
-import './Landing.css'
-import MoodMountain from '../../components/MoodMountain/MoodMountain';
+import './Calendar.css'
 
 
-const Landing = (props) => {
+const Calendar = (props) => {
     return (
-      <div className='Landing'>
-        <MoodMountain />
+      <div className='Calendar'>
         <div className="day">Hello</div>
         <div className="day">Hello</div>
         <div className="day">Hello</div>
@@ -15,4 +13,4 @@ const Landing = (props) => {
     );
   };
 
-export default Landing;
+export default Calendar;

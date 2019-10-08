@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import userService from '../../utils/userService';
 import './Login.css';
+import MoodMountain from '../../components/MoodMountain/MoodMountain';
 
 class Login extends Component {
   
@@ -34,6 +35,7 @@ class Login extends Component {
   render() {
     return (
       <div className="Login">
+        <MoodMountain />
         <header className="header-footer">Log In</header>
         <form className="form-horizontal" onSubmit={this.handleSubmit} >
           <div className="form-group">
