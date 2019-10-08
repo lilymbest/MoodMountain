@@ -1,6 +1,10 @@
+h2 {
+  text-align: center;
+}
+
 img {
   width: 20vmin;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 button .btn {
@@ -8,7 +12,6 @@ button .btn {
 }
 
 button {
-  display: inline;
   background-color: transparent;
   border: 0 transparent solid;
   border-radius: 25px;
@@ -16,12 +19,13 @@ button {
 
 h3 {
   font-size: 4vmin;
-  margin: .5vmin;
+  margin: 0;
 }
 
 .themeSelections1, .themeSelections2 {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
 }
 
 img.back {

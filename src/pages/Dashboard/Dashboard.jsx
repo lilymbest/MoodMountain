@@ -32,7 +32,7 @@ class DonutChart extends React.Component {
         },
         series: [20, 20, 20, 20, 20]
     }
-}
+} 
 handleLastClick() {
     this.setState({month:"September"})
 }
