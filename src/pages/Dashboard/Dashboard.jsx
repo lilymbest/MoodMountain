@@ -6,6 +6,7 @@ import ApexCharts from 'apexcharts'
 import NavBarTop from '../../components/NavBarTop/NavBarTop'
 import NavBarBottom from '../../components/NavBarBottom/NavBarBottom'
 
+
 class DonutChart extends React.Component {
     constructor(props) {
     super(props);
@@ -29,7 +30,7 @@ class DonutChart extends React.Component {
             }
           }]
         },
-        series: [23, 11, 54, 72, 12]
+        series: [20, 20, 20, 20, 20]
     }
 } 
 handleLastClick() {
