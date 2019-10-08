@@ -1,6 +1,7 @@
 .moodChart {
   display: grid;
   justify-content: center;
+  margin-bottom: 3em;
 }
 
 .arrows {

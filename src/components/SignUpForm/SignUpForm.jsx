@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './SignUpForm.css';
 import userService from '../../utils/userService';
+import MoodMountain from '../../components/MoodMountain/MoodMountain';
 
 class SignupForm extends Component {
 
@@ -39,6 +40,7 @@ class SignupForm extends Component {
   render() {
     return (
       <div className="signUpForm">
+        <MoodMountain />
         <header className="header-footer">Sign Up</header>
         <form className="form-horizontal" onSubmit={this.handleSubmit} >
           <div className="form-group">

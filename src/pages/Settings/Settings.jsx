@@ -121,7 +121,6 @@ render() {
     return (
     <div className="theme" style={{background: this.state.themeBackground}}>
         <a  href="/"><img src="images/back.png" className="back" alt=""/></a>
-        <img src={this.state.themeIcon} alt=""/>
         <h2>Select A Theme:</h2>
         <div className="themeSelections1">
         <div>
@@ -151,7 +150,6 @@ render() {
             <h3>Sunset</h3>
         </div> 
         </div>
-        <MoodIcons />
     </div>
     )
 }
