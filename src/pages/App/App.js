@@ -155,7 +155,6 @@ handleSignupOrLogin = () => {
         user={this.state.user}
         handleLogout={this.handleLogout}
         />
-        <a href="/howareyou">How You feelin?</a>
         <Switch>
         <Route exact path='/dashboard' render={() => <Dashboard /> } />
         <Route exact path='/signup' render={({ history }) => 
@@ -186,7 +185,9 @@ handleSignupOrLogin = () => {
         </>
         } />
         </Switch>
-        <NavBarBottom />
+        <NavBarBottom 
+        user={this.state.user}
+        />
       </div>
     )
   }

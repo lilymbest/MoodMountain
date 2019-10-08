@@ -7,7 +7,7 @@ const NavBarTop = (props) => {
     <div>
       <Link to='' className='NavBar-link' onClick={props.handleLogout}>LOG OUT</Link>
       <Link to='/landing'><img src="images/MoodMountain.png" alt=""/></Link>
-      <span className='NavBar-welcome'>WELCOME, {props.user.name}</span>
+      <span className='NavBar-welcome'>WELCOME {props.user.name}!</span>
     </div>
     :
     <div>
@@ -15,9 +15,13 @@ const NavBarTop = (props) => {
       <Link to='/landing'><img src="images/MoodMountain.png" alt=""/></Link>
       <Link to='/signup' className='NavBar-link'>SIGN UP</Link>
     </div>;
-
+  let color = props.user ?
+  props.user.themeColor 
+  :
+  "#D17B88"
+  ;
   return (
-    <div className='NavBar'style={{backgroundColor: '#D17B88'}}>
+    <div className='NavBar'style={{backgroundColor: color}}>
       {nav}
     </div>
   );
