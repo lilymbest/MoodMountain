@@ -11,9 +11,9 @@ import Settings from '../Settings/Settings'
 
 import './App.css';
 import { Route, Switch, Link } from 'react-router-dom';
-import MoodIcons from '../../components/MoodIcons/MoodIcons';
-import { directive } from '@babel/types';
-import Theme from '../../components/Theme/Theme';
+import MoodIcons from '../../components/MoodIcons/MoodIcons'
+import { directive, tsImportEqualsDeclaration } from '@babel/types';
+import Theme from '../../components/Theme/Theme'
 import userService from '../../utils/userService';
 import Login from '../Login/Login';
 import SignUp from '../SignUp/SignUp';
