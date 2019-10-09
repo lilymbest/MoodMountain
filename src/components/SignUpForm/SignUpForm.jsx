@@ -180,7 +180,7 @@ class SignupForm extends Component {
       try {
         await userService.signup(this.state);
         // Successfully signed up - show GamePage
-        this.props.history.push('/');
+        this.props.history.push('/')
       } catch (err) {
       // Invalid user data (probably duplicate email)
       this.props.updateMessage(err.message);
@@ -215,7 +215,7 @@ class SignupForm extends Component {
           </div>
           <div className="form-group">
             <div className="col-sm-12 text-center">
-              <button className="btn btn-default" disabled={this.isFormInvalid()}>Sign Up</button>&nbsp;&nbsp;
+            <Link to='/welcome1'><button className="btn btn-default" disabled={this.isFormInvalid()}>Sign Up</button></Link>
               <Link to='/land'>Cancel</Link>
             </div>
           </div>
