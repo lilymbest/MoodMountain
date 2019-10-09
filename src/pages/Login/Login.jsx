@@ -22,7 +22,7 @@ class Login extends Component {
     e.preventDefault();
     try {
       await userService.login(this.state);
-      // Let <App> know a user has signed up!
+      // Let app know a user has signed up!
       this.props.handleSignupOrLogin();
       // Successfully signed up - show GamePage
       this.props.history.push('/landing');
@@ -31,10 +31,10 @@ class Login extends Component {
       alert('Invalid Credentials!');
     }
   }
-
   render() {
     return (
       <div className="Login">
+        <img className="loginLogo" alt="logo" src="images/MoodMountain.png" />
         <MoodMountain />
         <header className="header-footer">Log In</header>
         <form className="form-horizontal" onSubmit={this.handleSubmit} >
@@ -50,8 +50,8 @@ class Login extends Component {
           </div>
           <div className="form-group">
             <div className="col-sm-12 text-center">
-              <button className="btnSignIn">Log In</button>&nbsp;&nbsp;&nbsp;
-              <Link to='/land'>Cancel</Link>
+              <button className="btnLogin">Log In</button>
+              <Link to='/'>Cancel</Link>
             </div>
           </div>
         </form>

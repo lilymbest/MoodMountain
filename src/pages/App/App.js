@@ -21,9 +21,9 @@ import MoodMountain from '../../components/MoodMountain/MoodMountain';
 import Landing from '../Landing/Landing';
 import Land from '../Land/Land';
 import Calendar from '../Calendar/Calendar';
-import Welcome1 from '../Welcome/Welcome1';
-import Welcome2 from '../Welcome/Welcome2';
-import Welcome3 from '../Welcome/Welcome3';
+import Welcome1 from '../Welcome/welcome1';
+import Welcome2 from '../Welcome/welcome2';
+import Welcome3 from '../Welcome/welcome3';
 
 
 class App extends Component {
@@ -162,14 +162,14 @@ handleSignupOrLogin = () => {
 
         <Switch>
 
-        <Route exact path='/land' render={() => <Land /> } />
+        <Route exact path='/' render={() => <Land /> } />
         <Route exact path='/welcome1' render={() => <Welcome1 /> } />
         <Route exact path='/welcome2' render={() => <Welcome2 /> } />
         <Route exact path='/welcome3' render={() => <Welcome3 /> } />
         <Route exact path='/landing' render={() => <Landing /> } />
         <Route exact path='/calendar' render={() => <Calendar /> } />
         <Route exact path='/settings' render={() => <Settings /> } />
-        <Route exact path='/dashboard' render={() => <Dashboard /> } />
+        <Route exact path='/dashboard' render={() => <Dashboard user={this.state.user}/> } />
         <Route exact path='/signup' render={({ history }) => 
             <SignUp
               history={history}

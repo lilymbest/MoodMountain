@@ -3,10 +3,10 @@
     background-color: #ffffff;
   }
 
-  .logo {
+  .loginLogo {
     height: calc(200px + (350 - 200) * ((100vw - 300px) / (1600 - 300)));
     width: calc(200px + (350 - 200) * ((100vw - 300px) / (1600 - 300)));
-    margin-top: 8em;
+    margin-top: 4em;
   }
 
   .auth{

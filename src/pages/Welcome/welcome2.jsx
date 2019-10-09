@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './Welcome.css'
+import './welcome.css'
 import MoodMountain from '../../components/MoodMountain/MoodMountain';
 
 const Welcome2 = (props) => {
