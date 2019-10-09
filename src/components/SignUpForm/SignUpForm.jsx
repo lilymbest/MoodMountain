@@ -37,7 +37,7 @@ isFormInvalid() {
 }
 
 autumnTheme(){
-  var ephoricIcon = 'images/Icons/Autumn/euphoricAutumn.png'
+  var euphoricIcon = 'images/Icons/Autumn/euphoricAutumn.png'
   var happyIcon = 'images/Icons/Autumn/happyAutumn.png'
   var neutralIcon = 'images/Icons/Autumn/neutralAutumn.png'
   var tenseIcon = 'images/Icons/Autumn/tenseAutumn.png'
@@ -46,7 +46,7 @@ autumnTheme(){
   var autumnBackground = '#C32F27'
   this.setState({themeIcon:autumn})
   this.setState({themeColor:autumnBackground})
-  this.setState({euphoricIcon: ephoricIcon})
+  this.setState({euphoricIcon: euphoricIcon})
   this.setState({happyIcon: happyIcon})
   this.setState({neutralIcon: neutralIcon})
   this.setState({tenseIcon: tenseIcon})
@@ -54,7 +54,7 @@ autumnTheme(){
 }
 
 forestTheme(){
-  var ephoricIcon = 'images/Icons/Forest/euphoricForest.png'
+  var euphoricIcon = 'images/Icons/Forest/euphoricForest.png'
   var happyIcon = 'images/Icons/Forest/happyForest.png'
   var neutralIcon = 'images/Icons/Forest/neutralForest.png'
   var tenseIcon = 'images/Icons/Forest/tenseForest.png'
@@ -63,14 +63,14 @@ forestTheme(){
   var forestBackground = '#646165'
   this.setState({themeIcon:forest})
   this.setState({themeColor:forestBackground})
-  this.setState({euphoricIcon: ephoricIcon})
+  this.setState({euphoricIcon: euphoricIcon})
   this.setState({happyIcon: happyIcon})
   this.setState({neutralIcon: neutralIcon})
   this.setState({tenseIcon: tenseIcon})
   this.setState({sadIcon: sadIcon})
 }
 glacierTheme(){
-  var ephoricIcon = 'images/Icons/Forest/euphoricForest.png'
+  var euphoricIcon = 'images/Icons/Forest/euphoricForest.png'
   var happyIcon = 'images/Icons/Forest/happyForest.png'
   var neutralIcon = 'images/Icons/Forest/neutralForest.png'
   var tenseIcon = 'images/Icons/Forest/tenseForest.png'
@@ -79,7 +79,7 @@ glacierTheme(){
   var glacierBackground = '#0E6BA8'
   this.setState({themeIcon:glacier})
   this.setState({themeColor:glacierBackground})
-  this.setState({euphoricIcon: ephoricIcon})
+  this.setState({euphoricIcon: euphoricIcon})
   this.setState({happyIcon: happyIcon})
   this.setState({neutralIcon: neutralIcon})
   this.setState({tenseIcon: tenseIcon})
@@ -87,7 +87,7 @@ glacierTheme(){
 
 }
 lavenderTheme(){
-  var ephoricIcon = 'images/Icons/Forest/euphoricForest.png'
+  var euphoricIcon = 'images/Icons/Forest/euphoricForest.png'
   var happyIcon = 'images/Icons/Forest/happyForest.png'
   var neutralIcon = 'images/Icons/Forest/neutralForest.png'
   var tenseIcon = 'images/Icons/Forest/tenseForest.png'
@@ -96,14 +96,14 @@ lavenderTheme(){
   var lavenderBackground = '#DDCAD9'
   this.setState({themeIcon:lavender})
   this.setState({themeColor:lavenderBackground})
-  this.setState({euphoricIcon: ephoricIcon})
+  this.setState({euphoricIcon: euphoricIcon})
   this.setState({happyIcon: happyIcon})
   this.setState({neutralIcon: neutralIcon})
   this.setState({tenseIcon: tenseIcon})
   this.setState({sadIcon: sadIcon})
 }
 rainbowTheme(){
-  var ephoricIcon = 'images/Icons/Forest/euphoricForest.png'
+  var euphoricIcon = 'images/Icons/Forest/euphoricForest.png'
   var happyIcon = 'images/Icons/Forest/happyForest.png'
   var neutralIcon = 'images/Icons/Forest/neutralForest.png'
   var tenseIcon = 'images/Icons/Forest/tenseForest.png'
@@ -112,14 +112,14 @@ rainbowTheme(){
   var rainbowBackground = '#DDCAD9'
   this.setState({themeIcon:rainbow})
   this.setState({themeColor:rainbowBackground})
-  this.setState({euphoricIcon: ephoricIcon})
+  this.setState({euphoricIcon: euphoricIcon})
   this.setState({happyIcon: happyIcon})
   this.setState({neutralIcon: neutralIcon})
   this.setState({tenseIcon: tenseIcon})
   this.setState({sadIcon: sadIcon})
 }
 defaultTheme(){
-  var ephoricIcon = 'images/Icons/Forest/euphoricForest.png'
+  var euphoricIcon = 'images/Icons/Forest/euphoricForest.png'
   var happyIcon = 'images/Icons/Forest/happyForest.png'
   var neutralIcon = 'images/Icons/Forest/neutralForest.png'
   var tenseIcon = 'images/Icons/Forest/tenseForest.png'
@@ -128,7 +128,7 @@ defaultTheme(){
   var defaultBackground = '#9BC53D'
   this.setState({themeIcon:defaultTheme})
   this.setState({themeColor:defaultBackground})
-  this.setState({euphoricIcon: ephoricIcon})
+  this.setState({euphoricIcon: euphoricIcon})
   this.setState({happyIcon: happyIcon})
   this.setState({neutralIcon: neutralIcon})
   this.setState({tenseIcon: tenseIcon})
@@ -209,28 +209,40 @@ handleSubmit = async (e) => {
           <div className="form-group">
             <div className="col-sm-12 text-center">
               <button className="btn btn-default" disabled={this.isFormInvalid()}>Sign Up</button>&nbsp;&nbsp;
-              <Link to='/'>Cancel</Link>
+              <Link to='/land'>Cancel</Link>
             </div>
           </div>
         </form>
-        <div className="form-group">
-            <div className="col-sm-12">
-              <button onClick={() => this.handleClickAutumn()}>Autumn</button>
-            </div>
-            <div className="col-sm-12">
-              <button onClick={() => this.handleClickForest()}>Forest</button>
-            </div>
-            <div className="col-sm-12">
-              <button onClick={() => this.handleClickGlacier()}>glacier</button>
-            </div>
-            <div className="col-sm-12">
-              <button onClick={() => this.handleClickLavender()}>lavender</button>
-            </div>
-            <div className="col-sm-12">
-              <button onClick={() => this.handleClickRainbow()}>rainbow</button>
-            </div>
-            <div className="col-sm-12">
-              <button onClick={() => this.handleClickDefault()}>default</button>
+
+        <div className="chooseATheme">
+          <h2>Select a Theme Color:</h2>
+          <div className="themeSelections1">
+            <div className="chooseTheme">
+              <button onClick={() => this.handleClickDefault()}><img className="btn" 
+              src="images/moodmountain.png" alt="Default Icon" /></button>
+              </div> 
+            <div className="chooseTheme">
+              <button onClick={() => this.handleClickAutumn()}><img className="btn" 
+              src="images/autumnthemeicon.png" alt="Autumn Icon" /></button>
+              </div>  
+            <div className="chooseTheme">
+              <button onClick={() => this.handleClickForest()}><img className="btn" 
+              src="images/forestthemeicon.png" alt="Forest Icon" /></button>
+              </div> 
+          </div>
+        <div className="themeSelections2">
+            <div className="chooseTheme">
+              <button onClick={() => this.handleClickGlacier()}><img className="btn" 
+              src="images/glacierthemeicon.png" alt="Glacier Icon" /></button>
+              </div>  
+            <div className="chooseTheme">
+              <button onClick={() => this.handleClickLavender()}><img className="btn" 
+              src="images/lavenderthemeicon.png" alt="Lavender Icon" /></button>
+              </div> 
+            <div className="chooseTheme">
+              <button onClick={() => this.handleClickRainbow()}><img className="btn" 
+              src="images/rainbowthemeicon.png" alt="Rainbow Icon" /></button>
+              </div>  
             </div>
           </div>
       </div>

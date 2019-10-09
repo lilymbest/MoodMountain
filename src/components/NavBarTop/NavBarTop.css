@@ -9,9 +9,8 @@ a {
 }
 
 .NavBarWelcome {
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
-    font-weight: bold;
     margin: 15px;
 }
 
@@ -24,5 +23,6 @@ a {
 .NavBarSignIn, .NavBarSignUp {
     text-align: center;
     display: inline;
-    padding: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
 }

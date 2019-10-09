@@ -7,7 +7,13 @@
 
 .day {
   border: 2px solid black;
-  height: 100px;
-  width: 400px;
+  height: 80px;
+  width: 300px;
   margin: 10px;
+  background: linear-gradient(to right, #75f4f4 0%, #d17b88 100%);
+}
+
+.details {
+  height: 50%;
+  width: 50%;
 }

@@ -19,6 +19,7 @@ import Login from '../Login/Login';
 import SignUp from '../SignUp/SignUp';
 import MoodMountain from '../../components/MoodMountain/MoodMountain';
 import Landing from '../Landing/Landing';
+import Land from '../Land/Land';
 import Calendar from '../Calendar/Calendar';
 
 
@@ -159,6 +160,7 @@ handleSignupOrLogin = () => {
 
         <Switch>
 
+        <Route exact path='/land' render={() => <Land /> } />
         <Route exact path='/landing' render={() => <Landing /> } />
         <Route exact path='/calendar' render={() => <Calendar /> } />
         <Route exact path='/settings' render={() => <Settings /> } />

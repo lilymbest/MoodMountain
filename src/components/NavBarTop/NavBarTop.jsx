@@ -4,10 +4,9 @@ import './NavBarTop.css'
 
 const NavBarTop = (props) => {
   let nav = props.user ?
-
     <div>
       <div className="logoImage">
-      <Link to='/landing'><img src="images/MoodMountain.png" alt=""/></Link>
+      <Link to='/land'><img src="images/MoodMountain.png" alt=""/></Link>
       </div>
 
       <div className='NavBarWelcome'>
@@ -19,10 +18,9 @@ const NavBarTop = (props) => {
       </div>
     </div>
     :
-
     <div>
       <div className="logoImage">
-      <Link to='/landing'><img src="images/MoodMountain.png" alt=""/></Link>
+      <Link to='/land'><img src="images/MoodMountain.png" alt=""/></Link>
       </div>
 
       <div className="NavBarSignIn">
@@ -41,7 +39,7 @@ const NavBarTop = (props) => {
   ;
   return (
     <div className='NavBar'style={{backgroundColor: color}}>
-      {nav}
+      {nav} 
     </div>
   );
 };
