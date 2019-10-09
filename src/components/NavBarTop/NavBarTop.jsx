@@ -19,17 +19,17 @@ const NavBarTop = (props) => {
     </div>
     :
     <div>
-      <div className="logoImage">
-      <Link to='/land'><img src="images/MoodMountain.png" alt=""/></Link>
+      <div className="Logo">
+      <Link to='/'><img src="images/MoodMountain.png" alt=""/></Link>
       </div>
-
+{/* 
       <div className="NavBarSignIn">
       <Link to='/login'>SIGN IN</Link>
       </div>
 
       <div className='NavBarSignUp'>
       <Link to='/signup'>SIGN UP</Link>
-      </div>
+      </div> */}
     </div>;
 
   let color = props.user ?

@@ -1,12 +1,25 @@
 import React, { Component } from 'react';
-import './Welcome.css'
+import { Link } from 'react-router-dom';
+import './welcome.css'
+import MoodMountain from '../../components/MoodMountain/MoodMountain';
 
-const Calendar = (props) => {
-    return (
-      <div className='Calendar'>
-        <div className="day">Welcome3</div>
+const Welcome3 = (props) => {
+
+  return (
+      <div className='Welcome1'>
+        <h1 className="welcome">Welcome to</h1>
+        <MoodMountain />
+        <p>
+          Mood Mountain is an emotional tracking app. 
+          Mood Mountain is an emotional tracking app. 
+          Mood Mountain is an emotional tracking app. 
+          Mood Mountain is an emotional tracking app. 
+          Mood Mountain is an emotional tracking app. 
+        </p>
+        <Link to='/howareyou'><img className="arrows" src="images/appIcons/black_arrow_right.svg"></img></Link>
+
       </div>
     );
   };
 
-export default Calendar;
+export default Welcome3;

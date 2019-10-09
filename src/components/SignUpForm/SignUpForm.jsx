@@ -190,6 +190,7 @@ class SignupForm extends Component {
   render() {
     return (
       <div className="signUpForm">
+        <img className="loginLogo" alt="logo" src="images/MoodMountain.png" />
         <MoodMountain />
         <header className="header-footer">Sign Up</header>
         <form className="form-horizontal" onSubmit={this.handleSubmit} >
@@ -225,29 +226,29 @@ class SignupForm extends Component {
           <h2>Select a Theme Color:</h2>
           <div className="themeSelections1">
             <div className="chooseTheme">
-              <button onClick={() => this.handleClickDefault()}><img className="btn" 
+              <button onClick={() => this.handleClickDefault()}><img
               src="images/moodmountain.png" alt="Default Icon" /></button>
               </div> 
             <div className="chooseTheme">
-              <button onClick={() => this.handleClickAutumn()}><img className="btn" 
+              <button onClick={() => this.handleClickAutumn()}><img
               src="images/autumnthemeicon.png" alt="Autumn Icon" /></button>
               </div>  
             <div className="chooseTheme">
-              <button onClick={() => this.handleClickForest()}><img className="btn" 
+              <button onClick={() => this.handleClickForest()}><img
               src="images/forestthemeicon.png" alt="Forest Icon" /></button>
               </div> 
           </div>
         <div className="themeSelections2">
             <div className="chooseTheme">
-              <button onClick={() => this.handleClickGlacier()}><img className="btn" 
+              <button onClick={() => this.handleClickGlacier()}><img 
               src="images/glacierthemeicon.png" alt="Glacier Icon" /></button>
               </div>  
             <div className="chooseTheme">
-              <button onClick={() => this.handleClickLavender()}><img className="btn" 
+              <button onClick={() => this.handleClickLavender()}><img 
               src="images/lavenderthemeicon.png" alt="Lavender Icon" /></button>
               </div> 
             <div className="chooseTheme">
-              <button onClick={() => this.handleClickRainbow()}><img className="btn" 
+              <button onClick={() => this.handleClickRainbow()}><img
               src="images/rainbowthemeicon.png" alt="Rainbow Icon" /></button>
               </div>  
             </div>

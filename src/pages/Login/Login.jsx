@@ -34,6 +34,7 @@ class Login extends Component {
   render() {
     return (
       <div className="Login">
+        <img className="loginLogo" alt="logo" src="images/MoodMountain.png" />
         <MoodMountain />
         <header className="header-footer">Log In</header>
         <form className="form-horizontal" onSubmit={this.handleSubmit} >
@@ -49,8 +50,8 @@ class Login extends Component {
           </div>
           <div className="form-group">
             <div className="col-sm-12 text-center">
-              <button className="btn btn-default">Log In</button>&nbsp;&nbsp;&nbsp;
-              <Link to='/land'>Cancel</Link>
+              <button className="btnLogin">Log In</button>
+              <Link to='/'>Cancel</Link>
             </div>
           </div>
         </form>
