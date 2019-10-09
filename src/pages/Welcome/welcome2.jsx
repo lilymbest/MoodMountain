@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Welcome.css'
+import './welcome.css'
 
 const Calendar = (props) => {
     return (

@@ -17,6 +17,9 @@ import SignUp from '../SignUp/SignUp'
 import Landing from '../Landing/Landing'
 import Land from '../Land/Land'
 import Calendar from '../Calendar/Calendar'
+import Welcome1 from '../Welcome/welcome1'
+import Welcome2 from '../Welcome/welcome2'
+import Welcome3 from '../Welcome/welcome3'
 
 /* Styles */
 import './App.css';
@@ -61,6 +64,15 @@ class App extends Component {
           }/>
           <Route exact path='/settings' render={() => 
             <Settings /> 
+          }/>
+          <Route exact path='/welcome1' render={() => 
+            <Welcome1 /> 
+          }/>
+          <Route exact path='/welcome2' render={() => 
+            <Welcome2 /> 
+          }/>
+          <Route exact path='/welcome3' render={() => 
+            <Welcome3 /> 
           }/>
           <Route exact path='/dashboard' render={() => 
             <Dashboard 
