@@ -6,7 +6,7 @@ const NavBarTop = (props) => {
   let nav = props.user ?
     <div>
       <Link to='' className='NavBar-link' onClick={props.handleLogout}>LOG OUT</Link>
-      <Link to='/landing'><img src="images/MoodMountain.png" alt=""/></Link>
+      <Link to='/landing'><img src={props.user.themeIcon} alt=""/></Link>
       <span className='NavBar-welcome'>WELCOME {props.user.name}!</span>
     </div>
     :

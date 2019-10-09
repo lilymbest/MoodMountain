@@ -3,19 +3,22 @@ import ReactDOM from 'react-dom';
 import './Dashboard.css';
 import ReactApexChart from 'react-apexcharts'
 import ApexCharts from 'apexcharts'
-import NavBarTop from '../../components/NavBarTop/NavBarTop'
-import NavBarBottom from '../../components/NavBarBottom/NavBarBottom'
+import userService from '../../utils/userService';
+import { thisTypeAnnotation } from '@babel/types';
 
 
 class DonutChart extends React.Component {
     constructor(props) {
     super(props);
+    let user = userService.getUser()
+    let userTheme = user.themeColors
     this.state = {
+        user: userService.getUser(),
         months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
         month: "October",
         options: {
         labels: ["Euphoric", "Happy", "Neutral", "Tense", "Sad"],
-        colors: ["#75F4F4", "#90E0F3", "#B8B3E9", "#D999B9", "#D17B88"],
+        colors: userTheme,
           responsive: [{
             breakpoint: 480,
             options: {
@@ -31,8 +34,10 @@ class DonutChart extends React.Component {
           }]
         },
         series: [20, 20, 20, 20, 20]
-    }
-} 
+    } 
+}
+
+
 handleLastClick() {
     this.setState({month:"September"})
 }
@@ -47,8 +52,8 @@ render() {
          <h1>{this.state.month}</h1>
          <button onClick={() => this.handleNextClick()}> <img className="arrows" src="images/appIcons/black_arrow_right.svg"></img></button>
          </div>
-      <div className="moodChart">
-        <ReactApexChart options={this.state.options} series={this.state.series} type="donut" width="380" /> 
+      <div className="moodChart" onLoad={() => this.setState({colors: this.state.user.themeColors}), console.log(this.state.user.themeColors)}>
+        <ReactApexChart options={this.state.options} series={this.state.series} type="donut" width="380" user={this.state.user} colors={this.state.colors} /> 
       </div>
         <div id="html-dist">
         </div>
@@ -57,4 +62,6 @@ render() {
     }
   }
 
+
+  
   export default DonutChart

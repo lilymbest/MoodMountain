@@ -12,15 +12,35 @@ const userSchema = new mongoose.Schema({
   neutral: Number,
   tense: Number,
   sad: Number,
+  themeColors: Array,
   themeColor: {
     type: String,
     default: '#D17B88'
   },
-  euphoricIcon: String,
-  happyIcon: String,
-  neutralIcon: String,
-  tenseIcon: String,
-  sadIcon: String,
+  themeIcon: {
+    type: String,
+    default: 'images/MoodMountain.png'
+  },
+  euphoricIcon: {
+    type: String,
+    default: 'images/moodIcons/Default/euphoricDefault.png'
+  },
+  happyIcon: {
+    type: String,
+    default: 'images/moodIcons/Default/happyDefault.png'
+  },
+  neutralIcon:{
+    type: String,
+    default: 'images/moodIcons/Default/neutralDefault.png'
+  },
+  tenseIcon: {
+    type: String,
+    default: 'images/moodIcons/Default/tenseDefault.png'
+  },
+  sadIcon: {
+    type: String,
+    default: 'images/moodIcons/Default/zsadDefault.png'
+  },
 }, {
   timestamps: true
 });

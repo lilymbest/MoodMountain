@@ -10,12 +10,14 @@ class SignupForm extends Component {
   this.state = {
     name: '',
     email: '',
-    themeColor: '',
-    euphoricIcon: '',
-    happyIcon: '',
-    neutralIcon: '',
-    tenseIcon: '',
-    sadIcon: '',
+    themeColors: [],
+    themeIcon: 'images/MoodMountain.png',
+    themeColor: '#D17B88',
+    euphoricIcon: 'images/moodIcons/Default/euphoricDefault.png',
+    happyIcon: 'images/moodIcons/Default/happyDefault.png',
+    neutralIcon: 'images/moodIcons/Default/neutralDefault.png',
+    tenseIcon: 'images/moodIcons/Default/tenseDefault.png',
+    sadIcon: 'images/moodIcons/Default/zsadDefault.png',
     password: '',
     passwordConf: '',
   }
@@ -42,8 +44,9 @@ autumnTheme(){
   var neutralIcon = 'images/Icons/Autumn/neutralAutumn.png'
   var tenseIcon = 'images/Icons/Autumn/tenseAutumn.png'
   var sadIcon = 'images/Icons/Autumn/zsadAutumn.png'
-  var autumn = ''
+  var autumn = 'images/themeIcons/autumnthemeicon.png'
   var autumnBackground = '#C32F27'
+  var autumnColors = ["#F7B538", "#DB7C26", "#D8572A", "#C32F27", "#780116"]
   this.setState({themeIcon:autumn})
   this.setState({themeColor:autumnBackground})
   this.setState({euphoricIcon: ephoricIcon})
@@ -51,6 +54,7 @@ autumnTheme(){
   this.setState({neutralIcon: neutralIcon})
   this.setState({tenseIcon: tenseIcon})
   this.setState({sadIcon: sadIcon})
+  this.setState({themeColors: autumnColors})
 }
 
 forestTheme(){
@@ -59,8 +63,9 @@ forestTheme(){
   var neutralIcon = 'images/Icons/Forest/neutralForest.png'
   var tenseIcon = 'images/Icons/Forest/tenseForest.png'
   var sadIcon = 'images/Icons/Forest/zsadForest.png'
-  var forest = ''
+  var forest = 'images/themeIcons/forestthemeicon.png'
   var forestBackground = '#646165'
+  var forestColors = ["#DDFCAD", "#C8E087", "#95A472", "#82846D", "#646165"]
   this.setState({themeIcon:forest})
   this.setState({themeColor:forestBackground})
   this.setState({euphoricIcon: ephoricIcon})
@@ -68,15 +73,17 @@ forestTheme(){
   this.setState({neutralIcon: neutralIcon})
   this.setState({tenseIcon: tenseIcon})
   this.setState({sadIcon: sadIcon})
+  this.setState({themeColors: forestColors})
 }
 glacierTheme(){
-  var ephoricIcon = 'images/Icons/Forest/euphoricForest.png'
-  var happyIcon = 'images/Icons/Forest/happyForest.png'
-  var neutralIcon = 'images/Icons/Forest/neutralForest.png'
-  var tenseIcon = 'images/Icons/Forest/tenseForest.png'
-  var sadIcon = 'images/Icons/Forest/zsadForest.png'
-  var glacier = ''
+  var ephoricIcon = 'images/Icons/Forest/euphoricGlacier.png'
+  var happyIcon = 'images/Icons/Forest/happyGlacier.png'
+  var neutralIcon = 'images/Icons/Forest/neutralGlacier.png'
+  var tenseIcon = 'images/Icons/Forest/tenseGlacier.png'
+  var sadIcon = 'images/Icons/Forest/zsadGlacier.png'
+  var glacier = 'images/themeIcons/glacierthemeicon.png'
   var glacierBackground = '#0E6BA8'
+  var defaultColors = ["#A6E1FA", "#0E6BA8", "#0A2472", "#001C55", "#00072D"]
   this.setState({themeIcon:glacier})
   this.setState({themeColor:glacierBackground})
   this.setState({euphoricIcon: ephoricIcon})
@@ -84,16 +91,18 @@ glacierTheme(){
   this.setState({neutralIcon: neutralIcon})
   this.setState({tenseIcon: tenseIcon})
   this.setState({sadIcon: sadIcon})
+  this.setState({themeColors: defaultColors})
 
 }
 lavenderTheme(){
-  var ephoricIcon = 'images/Icons/Forest/euphoricForest.png'
-  var happyIcon = 'images/Icons/Forest/happyForest.png'
-  var neutralIcon = 'images/Icons/Forest/neutralForest.png'
-  var tenseIcon = 'images/Icons/Forest/tenseForest.png'
-  var sadIcon = 'images/Icons/Forest/zsadForest.png'
-  var lavender = ''
+  var ephoricIcon = 'images/Icons/Forest/euphoricLavender.png'
+  var happyIcon = 'images/Icons/Forest/happyLavender.png'
+  var neutralIcon = 'images/Icons/Forest/neutralLavender.png'
+  var tenseIcon = 'images/Icons/Forest/tenseLavender.png'
+  var sadIcon = 'images/Icons/Forest/zsadLavender.png'
+  var lavender = 'images/themeIcons/lavenderthemeicon.png'
   var lavenderBackground = '#DDCAD9'
+  var defaultColors = ["#EAFDF8", "#E5E9EC", "#DDCAD9", "#D1B1CB", "#7C616C"]
   this.setState({themeIcon:lavender})
   this.setState({themeColor:lavenderBackground})
   this.setState({euphoricIcon: ephoricIcon})
@@ -101,15 +110,17 @@ lavenderTheme(){
   this.setState({neutralIcon: neutralIcon})
   this.setState({tenseIcon: tenseIcon})
   this.setState({sadIcon: sadIcon})
+  this.setState({themeColors: defaultColors})
 }
 rainbowTheme(){
-  var ephoricIcon = 'images/Icons/Forest/euphoricForest.png'
-  var happyIcon = 'images/Icons/Forest/happyForest.png'
-  var neutralIcon = 'images/Icons/Forest/neutralForest.png'
-  var tenseIcon = 'images/Icons/Forest/tenseForest.png'
-  var sadIcon = 'images/Icons/Forest/zsadForest.png'
-  var rainbow = ''
+  var ephoricIcon = 'images/Icons/Forest/euphoricRainbow.png'
+  var happyIcon = 'images/Icons/Forest/happyRainbow.png'
+  var neutralIcon = 'images/Icons/Forest/neutralRainbow.png'
+  var tenseIcon = 'images/Icons/Forest/tenseRainbow.png'
+  var sadIcon = 'images/Icons/Forest/zsadRainbow.png'
+  var rainbow = 'images/themeIcons/rainbowthemeicon.png'
   var rainbowBackground = '#DDCAD9'
+  var rainbowColors = ["#5BC0EB", "#9BC53D", "#FDE74C", "#FA7921", "#E55934"]
   this.setState({themeIcon:rainbow})
   this.setState({themeColor:rainbowBackground})
   this.setState({euphoricIcon: ephoricIcon})
@@ -117,15 +128,17 @@ rainbowTheme(){
   this.setState({neutralIcon: neutralIcon})
   this.setState({tenseIcon: tenseIcon})
   this.setState({sadIcon: sadIcon})
+  this.setState({themeColors: rainbowColors})
 }
 defaultTheme(){
-  var ephoricIcon = 'images/Icons/Forest/euphoricForest.png'
-  var happyIcon = 'images/Icons/Forest/happyForest.png'
-  var neutralIcon = 'images/Icons/Forest/neutralForest.png'
-  var tenseIcon = 'images/Icons/Forest/tenseForest.png'
-  var sadIcon = 'images/Icons/Forest/zsadForest.png'
-  var defaultTheme = ''
+  var ephoricIcon = 'images/Icons/Forest/euphoricDefault.png'
+  var happyIcon = 'images/Icons/Forest/happyDefault.png'
+  var neutralIcon = 'images/Icons/Forest/neutralDefault.png'
+  var tenseIcon = 'images/Icons/Forest/tenseDefault.png'
+  var sadIcon = 'images/Icons/Forest/zsadDefault.png'
+  var defaultTheme = 'images/themeIcons/MoodMountain.png'
   var defaultBackground = '#9BC53D'
+  var defaultColors = ["#75F4F4", "#90E0F3", "#B8B3E9", "#D999B9", "#D17B88"]
   this.setState({themeIcon:defaultTheme})
   this.setState({themeColor:defaultBackground})
   this.setState({euphoricIcon: ephoricIcon})
@@ -133,6 +146,7 @@ defaultTheme(){
   this.setState({neutralIcon: neutralIcon})
   this.setState({tenseIcon: tenseIcon})
   this.setState({sadIcon: sadIcon})
+  this.setState({themeColors: defaultColors})
 }
 
 handleClickAutumn(){

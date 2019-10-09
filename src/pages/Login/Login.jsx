@@ -22,7 +22,7 @@ class Login extends Component {
     e.preventDefault();
     try {
       await userService.login(this.state);
-      // Let <App> know a user has signed up!
+      // Let app know a user has signed up!
       this.props.handleSignupOrLogin();
       // Successfully signed up - show GamePage
       this.props.history.push('/');
@@ -31,7 +31,6 @@ class Login extends Component {
       alert('Invalid Credentials!');
     }
   }
-
   render() {
     return (
       <div className="Login">

@@ -4,7 +4,7 @@ import './NavBarBottom.css'
 
 const NavBarBottom = (props) => {
   let bottomNav = props.user ? 
-  <div>
+  <div className="NavBarBtm">
     <Link to='/landing'><img className="appIcon" src="images/appIcons/black_calendar.svg" alt=""/></Link>
       <Link to='/dashboard'><img className="appIcon" src="images/appIcons/black_stats.svg" alt=""/></Link>
       <Link to='/landing'><img className="appIconCenter" src="images/appIcons/black_plus_circle.svg" alt=""/></Link>
