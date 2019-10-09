@@ -14,11 +14,6 @@ a {
     margin: 15px;
 }
 
-.logoImage {
-    display: flex;
-    justify-content: center;
-}
-
 .NavBarWelcome, .NavBarLogOut,
 .NavBarSignIn, .NavBarSignUp {
     text-align: center;

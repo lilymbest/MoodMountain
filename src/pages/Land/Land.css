@@ -5,7 +5,7 @@
   .logo {
     height: calc(200px + (350 - 200) * ((100vw - 300px) / (1600 - 300)));
     width: calc(200px + (350 - 200) * ((100vw - 300px) / (1600 - 300)));
-    margin-top: 8em;
+    margin-top: 4em;
   }
 
   .auth{
@@ -14,10 +14,10 @@
 
   .logoName {
     font-family: 'Barlow', sans-serif;
-    /* font-size: 2em; */
+    font-size: calc(28px + (50 - 28) * ((100vw - 300px) / (1600 - 300)));
     letter-spacing: 1px;
     margin-bottom: 5px;
-    font-size: calc(28px + (50 - 28) * ((100vw - 300px) / (1600 - 300)));
+
   }
 
   .logoTagline {
