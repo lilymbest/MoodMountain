@@ -1,10 +1,12 @@
 # Mood Mountain
 
-[Mood Mountain](https://moodmountain.herokuapp.com/)
-
 ## Overview
 
-Mood Mountain is an emotional tracking app. 
+Mood Mountain is an emotional tracking app. Users are able to make daily entries on feelings≥ 
+
+[Mood Mountain](https://moodmountain.herokuapp.com/)
+
+[Trello](https://trello.com/b/MtRJppKw/moodtracker)
 
 ## Entity Relationship Diagram
 ![image description](../master/images/erd.jpg)
@@ -42,11 +44,29 @@ As a user I want to:
 
 - choose a color theme that matches my style
 
+
+
 ## Technologies Used
-HTML, CSS, Mongoose, Express JS, React JS, Node JS, Heroku
+HTML, CSS, Mongoose, Express JS, React JS, Node JS, Heroku, ApexCharts 
 
 ## Stretch Goals
 
-- 
+- Additional mood factors: 
+  Hours of Sleep
+
+  Hours of Work
+
+  Caffeine Intake
+
+  Water Intake
 
 
+  Number of Meals/Skipped Meals
+
+  Take medicine
+  
+  Period cycle
+
+- Tips to keep or address moods
+- Mood Journal
+- Push Notifications - How are you feeling today
