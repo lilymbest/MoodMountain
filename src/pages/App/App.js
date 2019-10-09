@@ -11,15 +11,18 @@ import Settings from '../Settings/Settings'
 
 import './App.css';
 import { Route, Switch, Link } from 'react-router-dom';
-import MoodIcons from '../../components/MoodIcons/MoodIcons';
-import { directive } from '@babel/types';
-import Theme from '../../components/Theme/Theme';
+import MoodIcons from '../../components/MoodIcons/MoodIcons'
+import { directive, tsImportEqualsDeclaration } from '@babel/types';
+import Theme from '../../components/Theme/Theme'
 import userService from '../../utils/userService';
 import Login from '../Login/Login';
-import Signup from '../Signup/Signup';
+import SignUp from '../SignUp/SignUp';
 import MoodMountain from '../../components/MoodMountain/MoodMountain';
 import Landing from '../Landing/Landing';
+import Land from '../Land/Land';
 import Calendar from '../Calendar/Calendar';
+
+
 
 class App extends Component {
   constructor() {
@@ -154,13 +157,16 @@ handleSignupOrLogin = () => {
         user={this.state.user}
         handleLogout={this.handleLogout}
         />
+
         <Switch>
+
+        <Route exact path='/land' render={() => <Land /> } />
         <Route exact path='/landing' render={() => <Landing /> } />
         <Route exact path='/calendar' render={() => <Calendar /> } />
         <Route exact path='/settings' render={() => <Settings /> } />
         <Route exact path='/dashboard' render={() => <Dashboard user={this.state.user}/> } />
         <Route exact path='/signup' render={({ history }) => 
-            <Signup
+            <SignUp
               history={history}
               handleSignupOrLogin={this.handleSignupOrLogin}
             />
@@ -196,4 +202,3 @@ handleSignupOrLogin = () => {
 }
 
 export default App;
-

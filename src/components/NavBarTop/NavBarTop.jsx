@@ -5,16 +5,33 @@ import './NavBarTop.css'
 const NavBarTop = (props) => {
   let nav = props.user ?
     <div>
-      <Link to='' className='NavBar-link' onClick={props.handleLogout}>LOG OUT</Link>
-      <Link to='/landing'><img src={props.user.themeIcon} alt=""/></Link>
-      <span className='NavBar-welcome'>WELCOME {props.user.name}!</span>
+      <div className="logoImage">
+      <Link to='/land'><img src="images/MoodMountain.png" alt=""/></Link>
+      </div>
+
+      <div className='NavBarWelcome'>
+      <span>Welcome, {props.user.name}!</span>
+      </div>
+
+      <div className='NavBarLogOut'>
+      <Link to='' onClick={props.handleLogout}>LOG OUT</Link>
+      </div>
     </div>
     :
     <div>
-      <Link to='/login' className='NavBar-link'>SIGN IN</Link>
-      <Link to='/landing'><img src="images/MoodMountain.png" alt=""/></Link>
-      <Link to='/signup' className='NavBar-link'>SIGN UP</Link>
+      <div className="logoImage">
+      <Link to='/land'><img src="images/MoodMountain.png" alt=""/></Link>
+      </div>
+
+      <div className="NavBarSignIn">
+      <Link to='/login'>SIGN IN</Link>
+      </div>
+
+      <div className='NavBarSignUp'>
+      <Link to='/signup'>SIGN UP</Link>
+      </div>
     </div>;
+
   let color = props.user ?
   props.user.themeColor 
   :
@@ -22,7 +39,7 @@ const NavBarTop = (props) => {
   ;
   return (
     <div className='NavBar'style={{backgroundColor: color}}>
-      {nav}
+      {nav} 
     </div>
   );
 };

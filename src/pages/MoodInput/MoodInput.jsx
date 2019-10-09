@@ -53,9 +53,6 @@ class App extends Component {
           </div> 
         </div>
 
-
-
-
         </>
       } />
         <Route exact path='/themecolors' render={() => 

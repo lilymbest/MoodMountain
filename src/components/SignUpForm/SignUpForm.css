@@ -4,3 +4,12 @@
   margin-bottom: 3em;
 }
 
+.themeSelections1, .themeSelections2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  margin: 5px;
+}

@@ -25,7 +25,7 @@ class Login extends Component {
       // Let app know a user has signed up!
       this.props.handleSignupOrLogin();
       // Successfully signed up - show GamePage
-      this.props.history.push('/');
+      this.props.history.push('/landing');
     } catch (err) {
       // Use a modal or toast in your apps instead of alert
       alert('Invalid Credentials!');
@@ -50,7 +50,7 @@ class Login extends Component {
           <div className="form-group">
             <div className="col-sm-12 text-center">
               <button className="btn btn-default">Log In</button>&nbsp;&nbsp;&nbsp;
-              <Link to='/'>Cancel</Link>
+              <Link to='/land'>Cancel</Link>
             </div>
           </div>
         </form>
