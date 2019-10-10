@@ -7,6 +7,11 @@ module.exports = {
   login
 };
 
+
+function moodInput(req, res) {
+  
+}
+
 async function signup(req, res) {
   const user = new User(req.body);
   try {
