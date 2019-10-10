@@ -1,13 +1,19 @@
 .logoMM {
-  display: inline;
+  display: grid;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 
 .logoImage {
   height: calc(100px + (350 - 100) * ((100vw - 300px) / (1600 - 300)));
   width: calc(100px + (350 - 100) * ((100vw - 300px) / (1600 - 300)));
-  margin-top: 50px;
+  margin-top: 60px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
 }
 
 .logoName {
