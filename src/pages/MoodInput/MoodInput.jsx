@@ -26,6 +26,7 @@ class App extends Component {
       <Switch>
          
       <div className="App">
+      <form action="POST">
       <Route exact path='/MoodInput' render={() =>
       <>
         <header className='feelingToday'>How are you today?</header>
@@ -58,7 +59,7 @@ class App extends Component {
         <Route exact path='/themecolors' render={() => 
           <ThemeColors />
           } />
-          
+        </form>
       </div>
      </Switch>
     )
