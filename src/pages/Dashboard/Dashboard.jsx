@@ -13,6 +13,11 @@ class DonutChart extends React.Component {
         super(props);
         let user = userService.getUser()
         let userTheme = user.themeColors
+        let euphoric = user.euphoric
+        let happy = user.happy
+        let neutral = user.neutral
+        let tense = user. tense
+        let sad = user.sad
         this.state = {
             user: userService.getUser(),
             months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
@@ -33,7 +38,7 @@ class DonutChart extends React.Component {
                     }
                 }]
             },
-            series: [20, 20, 20, 20, 20]
+            series: [euphoric, happy, neutral, tense, sad]
         } 
     }
 
