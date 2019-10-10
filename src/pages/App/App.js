@@ -91,36 +91,20 @@ class App extends Component {
               handleSignupOrLogin={this.handleSignupOrLogin}
             />
           }/>
-<<<<<<< HEAD
+
         <Route exact path='/moodinput' render={() =>
         <>
-        <Theme 
-        themeIcon={this.state.themeIcon}
-        />
-        <MoodIcons
-        euphoricIcon={this.state.euphoricIcon}
-        happyIcon={this.state.happyIcon}
-        neutralIcon={this.state.neutralIcon}
-        tenseIcon={this.state.tenseIcon}
-        sadIcon={this.state.sadIcon}
-        handleClickAutumn={this.handleClickAutumn}
-        />
-        </>
-        } />
-=======
-          <Route exact path='/howareyou' render={() =>
-            <>
-              <MoodIcons
-                euphoricIcon={this.state.euphoricIcon}
-                happyIcon={this.state.happyIcon}
-                neutralIcon={this.state.neutralIcon}
-                tenseIcon={this.state.tenseIcon}
-                sadIcon={this.state.sadIcon}
-                handleClickAutumn={this.handleClickAutumn}
-              />
+          <MoodIcons
+            euphoricIcon={this.state.euphoricIcon}
+            happyIcon={this.state.happyIcon}
+            neutralIcon={this.state.neutralIcon}
+            tenseIcon={this.state.tenseIcon}
+            sadIcon={this.state.sadIcon}
+            handleClickAutumn={this.handleClickAutumn}
+          />
           </>
         }/>
->>>>>>> master
+
         </Switch>
         <NavBarBottom 
         user={this.state.user}

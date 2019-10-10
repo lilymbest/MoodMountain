@@ -9,7 +9,7 @@ import Login from '../../pages/Login/Login'
 
 const Land = (props) => {
   return (
-    <div className="auth">
+    <div className="homePage">
     
       <MoodMountain />
       

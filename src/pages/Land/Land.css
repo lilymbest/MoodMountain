@@ -2,28 +2,8 @@
     background-color: #ffffff;
   }
 
-  .logo {
-    height: calc(200px + (350 - 200) * ((100vw - 300px) / (1600 - 300)));
-    width: calc(200px + (350 - 200) * ((100vw - 300px) / (1600 - 300)));
-    margin-top: 2em;
-  }
-
   .auth{
     text-align: center;
-  }
-
-  .logoName {
-    font-family: 'Barlow', sans-serif;
-    font-size: calc(28px + (50 - 28) * ((100vw - 300px) / (1600 - 300)));
-    letter-spacing: 1px;
-    margin-bottom: 5px;
-
-  }
-
-  .logoTagline {
-    font-family: 'Assistant', sans-serif;
-    font-size: calc(22px + (50 - 22) * ((100vw - 300px) / (1600 - 300)));
-    margin: 0;
   }
 
   .authBtn {

@@ -21,3 +21,9 @@ a {
     padding-left: 20px;
     padding-right: 20px;
 }
+
+appLogo {
+    width: 20vmin;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }

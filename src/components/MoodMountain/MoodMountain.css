@@ -1,4 +1,16 @@
-h1 {
+.logoMM {
+  display: inline;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoImage {
+  height: calc(100px + (350 - 100) * ((100vw - 300px) / (1600 - 300)));
+  width: calc(100px + (350 - 100) * ((100vw - 300px) / (1600 - 300)));
+  margin-top: 50px;
+}
+
+.logoName {
   font-family: 'Barlow', sans-serif;
   font-size: calc(28px + (50 - 28) * ((100vw - 300px) / (1600 - 300)));
   letter-spacing: 1px;
@@ -12,13 +24,13 @@ h1 {
   margin-bottom: .15em;
 }
 
-h3 {
+.logoTagline {
   font-family: 'Assistant', sans-serif;
-  font-size: calc(16px + (30 - 16) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(18px + (30 - 18) * ((100vw - 300px) / (1600 - 300)));
   letter-spacing: 1px;
   font-style: normal;
   letter-spacing: 2px;
   text-decoration: none;
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
