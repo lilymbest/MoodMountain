@@ -1,16 +1,83 @@
-.signUpForm {
-  text-align: center;
-  margin-top: 3em;
-  margin-bottom: 3em;
+/* Larger than mobile */
+@media (max-width: 549px) {
+  .signUp {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-horizontal {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .chooseTheme{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-control {
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
-.themeSelections1, .themeSelections2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Larger than phablet */
+@media (min-width: 550px) {
+  .signUpForm {
+    text-align: center;
+  }
 
+  .signUp {
+    display: flex;
+    margin-left: 30px;
+  }
+
+  .themeColor {
+    margin-bottom: 10px; 
+  }
+
+  img.themeColor {
+    width: 70px;
+    height: 70px;
+  }
+
+  .chooseTheme{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button {
+    margin: 5px;
+  }
+
+  .chooseATheme {
+    margin-left: 100px;
+  }
 }
 
-.button {
-  margin: 5px;
-}
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
+
+

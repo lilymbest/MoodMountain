@@ -32,7 +32,7 @@ class MoodIcons extends Component{
                         </div> 
                     </div>
 
-                    <div className="authBtn">
+                    <div className="addMood">
                         <Link className='btnMood' to='/MoodInput'>Add Mood</Link>
                         </div>
             </div>

@@ -119,38 +119,40 @@ handleClickDefault(){
 
 render() {
     return (
-    <div className="theme" style={{background: this.state.themeBackground}}>
-        <a  href="/"><img src="images/back.png" className="back" alt=""/></a>
-        <h2>Select A Theme:</h2>
+
+        <div className="chooseATheme" style={{background: this.state.themeBackground}}>
+        <h2 className="themeColor">Select a Theme Color:</h2>
         <div className="themeSelections1">
-        <div>
-            <button onClick={() => this.handleClickAutumn()}><img className="btn" src="images/autumnthemeicon.png" alt="" /></button>
-            <h3>Autumn</h3>
-        </div>    
-        <div>
-            <button onClick={() => this.handleClickForest()}><img className="btn" src="images/forestthemeicon.png" alt="" /></button>
-            <h3>Forest</h3>
-        </div> 
-        <div>
-            <button onClick={() => this.handleClickGlacier()}><img className="btn" src="images/glacierthemeicon.png"  alt="" /></button>
-            <h3>Glacier</h3>
-        </div> 
+          <div className="chooseTheme">
+            <button onClick={() => this.handleClickDefault()}><img
+            src="images/moodmountain.png" alt="Default Icon"/></button>
+            </div> 
+          <div className="chooseTheme">
+            <button onClick={() => this.handleClickAutumn()}><img
+            src="images/autumnthemeicon.png" alt="Autumn Icon" /></button>
+            </div>  
+          <div className="chooseTheme">
+            <button onClick={() => this.handleClickForest()}><img
+            src="images/forestthemeicon.png" alt="Forest Icon" /></button>
+            </div> 
         </div>
-        <div className="themeSelections2">
-        <div>
-            <button onClick={() => this.handleClickLavender()}><img className="btn" src="images/lavenderthemeicon.png" alt="" /></button>
-            <h3>Lavender</h3>
-        </div> 
-        <div>
-            <button onClick={() => this.handleClickRainbow()}><img className="btn" src="images/rainbowthemeicon.png" alt="" /></button>
-            <h3>Rainbow</h3>
-        </div> 
-        <div>
-            <button onClick={() => this.handleClickDefault()}><img className="btn" src="images/MoodMountain.png"alt="" /></button>
-            <h3>Sunset</h3>
-        </div> 
+      <div className="themeSelections2">
+          <div className="chooseTheme">
+            <button onClick={() => this.handleClickGlacier()}><img 
+            src="images/glacierthemeicon.png" alt="Glacier Icon" /></button>
+            </div>  
+          <div className="chooseTheme">
+            <button onClick={() => this.handleClickLavender()}><img 
+            src="images/lavenderthemeicon.png" alt="Lavender Icon" /></button>
+            </div> 
+          <div className="chooseTheme">
+            <button onClick={() => this.handleClickRainbow()}><img
+            src="images/rainbowthemeicon.png" alt="Rainbow Icon" /></button>
+            </div>  
+          </div>
         </div>
-    </div>
+
+
     )
 }
 }

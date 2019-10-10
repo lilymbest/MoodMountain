@@ -196,8 +196,10 @@ class SignupForm extends Component {
     return (
       <div className="signUpForm">
         <MoodMountain />
-        <header className="header-footer">Sign Up</header>
+
+        <div className="signUp">
         <form className="form-horizontal" onSubmit={this.handleSubmit} >
+        <h2 className="themeColor">Sign Up:</h2>
           <div className="form-group">
             <div className="col-sm-12">
               <input type="text" className="form-control" placeholder="Name" value={this.state.name} name="name" onChange={this.handleChange} />
@@ -218,44 +220,46 @@ class SignupForm extends Component {
               <input type="password" className="form-control" placeholder="Confirm Password" value={this.state.passwordConf} name="passwordConf" onChange={this.handleChange} />
             </div>
           </div>
-          <div className="form-group">
-            <div className="col-sm-12 text-center">
-            <button className="btn btn-default" disabled={this.isFormInvalid()}>Sign Up</button>
-              <Link to='/land'>Cancel</Link>
-            </div>
-          </div>
         </form>
-
         <div className="chooseATheme">
-          <h2>Select a Theme Color:</h2>
+          <h2 className="themeColor">Select a Theme Color:</h2>
           <div className="themeSelections1">
             <div className="chooseTheme">
-              <button onClick={() => this.handleClickDefault()}><img className="btn" 
-              src="images/moodmountain.png" alt="Default Icon" /></button>
+              <button onClick={() => this.handleClickDefault()}><img
+              src="images/moodmountain.png" alt="Default Icon" className="themeColor"/></button>
               </div> 
             <div className="chooseTheme">
-              <button onClick={() => this.handleClickAutumn()}><img className="btn" 
-              src="images/autumnthemeicon.png" alt="Autumn Icon" /></button>
+              <button onClick={() => this.handleClickAutumn()}><img
+              src="images/autumnthemeicon.png" alt="Autumn Icon" className="themeColor"/></button>
               </div>  
             <div className="chooseTheme">
-              <button onClick={() => this.handleClickForest()}><img className="btn" 
-              src="images/forestthemeicon.png" alt="Forest Icon" /></button>
+              <button onClick={() => this.handleClickForest()}><img
+              src="images/forestthemeicon.png" alt="Forest Icon" className="themeColor"/></button>
               </div> 
           </div>
         <div className="themeSelections2">
             <div className="chooseTheme">
-              <button onClick={() => this.handleClickGlacier()}><img className="btn" 
-              src="images/glacierthemeicon.png" alt="Glacier Icon" /></button>
+              <button onClick={() => this.handleClickGlacier()}><img 
+              src="images/glacierthemeicon.png" alt="Glacier Icon" className="themeColor"/></button>
               </div>  
             <div className="chooseTheme">
-              <button onClick={() => this.handleClickLavender()}><img className="btn" 
-              src="images/lavenderthemeicon.png" alt="Lavender Icon" /></button>
+              <button onClick={() => this.handleClickRainbow()}><img
+              src="images/riverbedthemeicon.png" alt="Riverbed Icon" className="themeColor"/></button>
+              </div>  
+            <div className="chooseTheme">
+              <button onClick={() => this.handleClickLavender()}><img 
+              src="images/lavenderthemeicon.png" alt="Lavender Icon" className="themeColor"/></button>
               </div> 
-            <div className="chooseTheme">
-              <button onClick={() => this.handleClickRiverbed()}><img className="btn" 
-              src="images/riverbedthemeicon.png" alt="Riverbed Icon" /></button>
-              </div>  
             </div>
+            </div>
+            </div>
+            <div className="form-group">
+            <div className="col-sm-12 text-center">
+           <button className="btn btn-default" disabled={this.isFormInvalid()}>Sign Up</button>
+              <Link to='/land'>Cancel</Link>
+
+
+          </div>
           </div>
       </div>
     );

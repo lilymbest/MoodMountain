@@ -7,8 +7,9 @@ const Welcome1 = (props) => {
   
   return (
       <div className='Welcome1'>
-        <h1 className="welcome">Welcome to</h1>
         <MoodMountain />
+
+        <h1 className="welcomeMessage">Welcome to</h1>
         <p>
           Mood Mountain is an emotional tracking app. 
           Mood Mountain is an emotional tracking app. 

@@ -98,6 +98,7 @@ class App extends Component {
               />
           </>
         }/>
+
         </Switch>
         <NavBarBottom 
         user={this.state.user}

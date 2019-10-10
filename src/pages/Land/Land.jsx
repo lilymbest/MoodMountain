@@ -9,9 +9,8 @@ import Login from '../../pages/Login/Login'
 
 const Land = (props) => {
   return (
-    <div className="auth">
-      <img className="loginLogo" alt="logo" src="images/MoodMountain.png" />
-      
+    <div className="homePage">
+    
       <MoodMountain />
       
       <div className="authBtn">
