@@ -27,6 +27,17 @@ element.style {
   height: 100%
 }
 
+div.description {
+  text-align: center;
+  
+}
+
+input.description {
+  width: 100%;
+  max-width: 150px;
+  box-sizing: border-box;
+  overflow:hidden;
+}
 
 .btnMood, .btnTheme {
   font-family: 'Assistant', sans-serif;

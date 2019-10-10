@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import userService from '../../utils/userService';
-import './Login.css';
-import MoodMountain from '../../components/MoodMountain/MoodMountain';
 
 class Login extends Component {
   
@@ -22,19 +20,19 @@ class Login extends Component {
     e.preventDefault();
     try {
       await userService.login(this.state);
-      // Let app know a user has signed up!
+      // Let <App> know a user has signed up!
       this.props.handleSignupOrLogin();
       // Successfully signed up - show GamePage
-      this.props.history.push('/landing');
+      this.props.history.push('/');
     } catch (err) {
       // Use a modal or toast in your apps instead of alert
       alert('Invalid Credentials!');
     }
   }
+
   render() {
     return (
       <div className="Login">
-        <MoodMountain />
         <header className="header-footer">Log In</header>
         <form className="form-horizontal" onSubmit={this.handleSubmit} >
           <div className="form-group">
@@ -49,7 +47,7 @@ class Login extends Component {
           </div>
           <div className="form-group">
             <div className="col-sm-12 text-center">
-              <button className="btnLogin">Log In</button>
+              <button className="btn btn-default">Log In</button>&nbsp;&nbsp;&nbsp;
               <Link to='/'>Cancel</Link>
             </div>
           </div>

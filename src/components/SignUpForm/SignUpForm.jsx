@@ -10,6 +10,11 @@ class SignupForm extends Component {
     this.state = {
       name: '',
       email: '',
+      euphoric: 1,
+      happy: 1,
+      neutral: 1,
+      tense: 1,
+      sad: 1,
       themeColors: [],
       themeIcon: 'images/MoodMountain.png',
       themeColor: '#D17B88',
@@ -25,7 +30,7 @@ class SignupForm extends Component {
     this.forestTheme = this.forestTheme.bind(this)
     this.glacierTheme = this.glacierTheme.bind(this)
     this.lavenderTheme = this.lavenderTheme.bind(this)
-    this.rainbowTheme = this.rainbowTheme.bind(this)
+    this.riverbedTheme = this.riverbedTheme.bind(this)
     this.defaultTheme = this.defaultTheme.bind(this)
     this.handleClickAutumn = this.handleClickAutumn.bind(this)
     this.isFormInvalid = this.isFormInvalid.bind(this)
@@ -73,14 +78,14 @@ class SignupForm extends Component {
     this.setState({themeColors: forestColors})
   }
   glacierTheme(){
-    var euphoricIcon = 'images/Icons/Forest/euphoricForest.png'
-    var happyIcon = 'images/Icons/Forest/happyForest.png'
-    var neutralIcon = 'images/Icons/Forest/neutralForest.png'
-    var tenseIcon = 'images/Icons/Forest/tenseForest.png'
-    var sadIcon = 'images/Icons/Forest/zsadForest.png'
+    var euphoricIcon = 'images/Icons/Glacier/euphoricGlacier.png'
+    var happyIcon = 'images/Icons/Glacier/happyGlacier.png'
+    var neutralIcon = 'images/Icons/Glacier/neutralGlacier.png'
+    var tenseIcon = 'images/Icons/Glacier/tenseGlacier.png'
+    var sadIcon = 'images/Icons/Glacier/zsadGlacier.png'
     var glacier = ''
     var glacierBackground = '#0E6BA8'
-    var defaultColors = ["#A6E1FA", "#0E6BA8", "#0A2472", "#001C55", "#00072D"]
+    var glacierColors = ["#A6E1FA", "#0E6BA8", "#0A2472", "#001C55", "#00072D"]
     this.setState({themeIcon:glacier})
     this.setState({themeColor:glacierBackground})
     this.setState({euphoricIcon: euphoricIcon})
@@ -88,14 +93,14 @@ class SignupForm extends Component {
     this.setState({neutralIcon: neutralIcon})
     this.setState({tenseIcon: tenseIcon})
     this.setState({sadIcon: sadIcon})
-    this.setState({themeColors: defaultColors})
+    this.setState({themeColors: glacierColors})
   }
   lavenderTheme(){
-    var euphoricIcon = 'images/Icons/Forest/euphoricForest.png'
-    var happyIcon = 'images/Icons/Forest/happyForest.png'
-    var neutralIcon = 'images/Icons/Forest/neutralForest.png'
-    var tenseIcon = 'images/Icons/Forest/tenseForest.png'
-    var sadIcon = 'images/Icons/Forest/zsadForest.png'
+    var euphoricIcon = 'images/Icons/Lavender/euphoricLavender.png'
+    var happyIcon = 'images/Icons/Lavender/happyLavender.png'
+    var neutralIcon = 'images/Icons/Lavender/neutralLavender.png'
+    var tenseIcon = 'images/Icons/Lavender/tenseLavender.png'
+    var sadIcon = 'images/Icons/Lavender/zsadLavender.png'
     var lavender = ''
     var lavenderBackground = '#DDCAD9'
     var defaultColors = ["#EAFDF8", "#E5E9EC", "#DDCAD9", "#D1B1CB", "#7C616C"]
@@ -108,30 +113,30 @@ class SignupForm extends Component {
     this.setState({sadIcon: sadIcon})
     this.setState({themeColors: defaultColors})
   }
-  rainbowTheme(){
-    var euphoricIcon = 'images/Icons/Forest/euphoricForest.png'
-    var happyIcon = 'images/Icons/Forest/happyForest.png'
-    var neutralIcon = 'images/Icons/Forest/neutralForest.png'
-    var tenseIcon = 'images/Icons/Forest/tenseForest.png'
-    var sadIcon = 'images/Icons/Forest/zsadForest.png'
-    var rainbow = ''
-    var rainbowBackground = '#DDCAD9'
-    var rainbowColors = ["#5BC0EB", "#9BC53D", "#FDE74C", "#FA7921", "#E55934"]
-    this.setState({themeIcon:rainbow})
-    this.setState({themeColor:rainbowBackground})
+  riverbedTheme(){
+    var euphoricIcon = 'images/Icons/Riverbed/euphoricRiverbed.png'
+    var happyIcon = 'images/Icons/Riverbed/happyRiverbed.png'
+    var neutralIcon = 'images/Icons/Riverbed/neutralRiverbed.png'
+    var tenseIcon = 'images/Icons/Riverbed/tenseRiverbed.png'
+    var sadIcon = 'images/Icons/Riverbed/zsadRiverbed.png'
+    var riverbed = ''
+    var riverbedBackground = '#D0EFB1'
+    var riverbedColors = ['#D0EFB1', '#B3D89C', '#9DC3C2', '#77A6B6', '#4D7298']
+    this.setState({themeIcon:riverbed})
+    this.setState({themeColor:riverbedBackground})
     this.setState({euphoricIcon: euphoricIcon})
     this.setState({happyIcon: happyIcon})
     this.setState({neutralIcon: neutralIcon})
     this.setState({tenseIcon: tenseIcon})
     this.setState({sadIcon: sadIcon})
-    this.setState({themeColors: rainbowColors})
+    this.setState({themeColors: riverbedColors})
   }
   defaultTheme(){
-    var euphoricIcon = 'images/Icons/Forest/euphoricForest.png'
-    var happyIcon = 'images/Icons/Forest/happyForest.png'
-    var neutralIcon = 'images/Icons/Forest/neutralForest.png'
-    var tenseIcon = 'images/Icons/Forest/tenseForest.png'
-    var sadIcon = 'images/Icons/Forest/zsadForest.png'
+    var euphoricIcon = 'images/Icons/Default/euphoricDefault2.png'
+    var happyIcon = 'images/Icons/Default/happyDefault.png'
+    var neutralIcon = 'images/Icons/Default/neutralDefault.png'
+    var tenseIcon = 'images/Icons/Default/tenseDefault.png'
+    var sadIcon = 'images/Icons/Default/zsadDefault.png'
     var defaultTheme = ''
     var defaultBackground = '#9BC53D'
     var defaultColors = ["#75F4F4", "#90E0F3", "#B8B3E9", "#D999B9", "#D17B88"]
@@ -162,8 +167,8 @@ class SignupForm extends Component {
     this.lavenderTheme()
   }
 
-  handleClickRainbow(){
-    this.rainbowTheme()
+  handleClickRiverbed(){
+    this.riverbedTheme()
   }
 
   handleClickDefault(){
@@ -215,9 +220,7 @@ class SignupForm extends Component {
               <input type="password" className="form-control" placeholder="Confirm Password" value={this.state.passwordConf} name="passwordConf" onChange={this.handleChange} />
             </div>
           </div>
-
         </form>
-
         <div className="chooseATheme">
           <h2 className="themeColor">Select a Theme Color:</h2>
           <div className="themeSelections1">
@@ -252,7 +255,7 @@ class SignupForm extends Component {
             </div>
             <div className="form-group">
             <div className="col-sm-12 text-center">
-            <Link to='/welcome1'><button className="btn btn-default" disabled={this.isFormInvalid()}>Sign Up</button></Link>
+           <button className="btn btn-default" disabled={this.isFormInvalid()}>Sign Up</button>
               <Link to='/land'>Cancel</Link>
 
 

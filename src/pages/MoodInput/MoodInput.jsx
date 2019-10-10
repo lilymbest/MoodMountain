@@ -1,70 +1,93 @@
 import React, { Component } from 'react';
 import './MoodInput.css';
 import { Route, Switch, Link } from 'react-router-dom';
-import ThemeColors from '../ThemeColors/ThemeColors'
+import userService from '../../utils/userService';
 
 
-class App extends Component {
-  state = {
-    moods: ['Euphoric', 'Elevated', 'Neutral', 'Tense', 'Low'],
-    euphoric: ['Manic', 'Grandiose', 'Impulsive'],
-    elevated: ['Happy', 'Motivated', 'Excited'],
-    neutral: ['Calm', 'Unsure', 'Disassociated'],
-    tense: ['Anxious', 'Stressed', 'Angry'],
-    low: ['Sad', 'Lonely', 'Depressed'],
-    themes: {
-    riverbed: ['#D0EFB1', '#B3D89C', '#9DC3C2', '#77A6B6', '#4D7298'],
-    rainbow: ['#FDE74C', '#9BC53D', '#FA7921', '#E55934', '#5BC0EB'],
-    glacier: ['#A6E1FA', '#0E6BA8', '#0A2472', '#001C55', '#00072D'],
-    lavenderFields:['#EAFDF8', '#E5E9EC',' #DDCAD9', '#D1B1CB', '#7C616C'],
-    autumn: ['#C32F27', '#D8572A', '#DB7C26', '#F7B538', '#780116'],
-    forest: ['#DDFCAD', '#C8E087',' #95A472', '#82846D', '#646165']
-    },
+class MoodInput extends Component {
+  constructor() {
+    super()
+  this.state = {
+    user: userService.getUser(),
+    moods: ['Euphoric', 'Elevated', 'Neutral', 'Tense', 'Low']
+  }
+  this.handleClickEuphoric = this.handleClickEuphoric.bind(this)
+  this.handleClickElevated = this.handleClickElevated.bind(this)
+  this.handleClickNeutral = this.handleClickNeutral.bind(this)
+  this.handleClickTense = this.handleClickTense.bind(this)
+  this.handleClickSad = this.handleClickSad.bind(this)
+  }  
+  handleClickEuphoric() {
+    var euphoricCount = this.state.user.euphoric
+    console.log(this.state.user.euphoric)
+    return euphoricCount += 1
+    
+  }
+  handleClickElevated() {
+    var elevatedCount = this.state.user.happy
+    console.log(this.state.user.happy)
+    return elevatedCount += 1
+    
+  }
+  handleClickNeutral() {
+    var neutralCount = this.state.user.neutral
+    console.log(this.state.user.neutral)
+    return neutralCount += 1
+    
+  }
+  handleClickTense() {
+    var tenseCount = this.state.user.tense
+    console.log(this.state.user.tense)
+    return tenseCount += 1 
+  }
+  handleClickSad() {
+    var sadCount = this.state.user.sad
+    console.log(this.state.user.sad)
+    return sadCount + 1
+   
   }
   render () {
     return (
       <Switch>
          
       <div className="App">
-      <form action="POST">
       <Route exact path='/MoodInput' render={() =>
       <>
         <header className='feelingToday'>How are you today?</header>
 
         <div className="moodSelector">
           <div>
-              <button onClick={() => this.handleClickEuphoric()}><img className="btn" src="images/.png" /></button>
+              <button onClick={() => this.handleClickEuphoric()}><img className="btn" src={this.state.user.euphoricIcon} /></button>
               <h3>{this.state.moods[0]}</h3>
           </div> 
           <div>
-              <button onClick={() => this.handleClickElevated()}><img className="btn" src="images/.png" /></button>
+              <button onClick={() => this.handleClickElevated()}><img className="btn" src={this.state.user.happyIcon} /></button>
               <h3>{this.state.moods[1]}</h3>
           </div> 
           <div>
-              <button onClick={() => this.handleClickNeutral()}><img className="btn" src="images/.png" /></button>
+              <button onClick={() => this.handleClickNeutral()}><img className="btn" src={this.state.user.neutralIcon} /></button>
               <h3>{this.state.moods[2]}</h3>
           </div> 
           <div>
-              <button onClick={() => this.handleClickTense()}><img className="btn" src="images/.png" /></button>
+              <button onClick={() => this.handleClickTense()}><img className="btn" src={this.state.user.tenseIcon} /></button>
               <h3>{this.state.moods[3]}</h3>
           </div> 
           <div>
-              <button onClick={() => this.handleClickLow()}><img className="btn" src="images/.png" /></button>
+              <button onClick={() => this.handleClickSad()}><img className="btn" src={this.state.user.sadIcon} /></button>
               <h3>{this.state.moods[4]}</h3>
           </div> 
         </div>
-
+        <div className="description">
+        <input className="description" type="text"/>
+        <h3>Description</h3>
+        </div>
         </>
       } />
-        <Route exact path='/themecolors' render={() => 
-          <ThemeColors />
-          } />
-        </form>
       </div>
      </Switch>
     )
   }
 }
 
-export default App;
+export default MoodInput;
 

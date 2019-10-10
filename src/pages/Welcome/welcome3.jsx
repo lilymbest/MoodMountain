@@ -15,7 +15,7 @@ const Welcome3 = (props) => {
           Mood Mountain is an emotional tracking app. 
           Mood Mountain is an emotional tracking app. 
           Mood Mountain is an emotional tracking app. 
-        </p>
+      </p>
         <Link to='/moodinput'><img className="arrows" src="images/appIcons/black_arrow_right.svg"></img></Link>
 
       </div>

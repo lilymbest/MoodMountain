@@ -7,7 +7,7 @@ import userService from '../../utils/userService';
 /* Components */
 import NavBarTop from '../../components/NavBarTop/NavBarTop'
 import NavBarBottom from '../../components/NavBarBottom/NavBarBottom'
-import MoodIcons from '../../components/MoodIcons/MoodIcons'
+import MoodInput from '../../pages/MoodInput/MoodInput'
 
 /* Pages */
 import Dashboard from '../Dashboard/Dashboard'
@@ -32,8 +32,8 @@ class App extends Component {
       user: userService.getUser(),
     }
     /* Binding (this) to functions */
-      this.handleLogout = this.handleLogout.bind(this)
-      this.handleSignupOrLogin = this.handleSignupOrLogin.bind(this)
+    this.handleLogout = this.handleLogout.bind(this)
+    this.handleSignupOrLogin = this.handleSignupOrLogin.bind(this)
   }
 
   handleLogout = () => {
@@ -91,17 +91,11 @@ class App extends Component {
               handleSignupOrLogin={this.handleSignupOrLogin}
             />
           }/>
-
-        <Route exact path='/moodinput' render={() =>
-        <>
-          <MoodIcons
-            euphoricIcon={this.state.euphoricIcon}
-            happyIcon={this.state.happyIcon}
-            neutralIcon={this.state.neutralIcon}
-            tenseIcon={this.state.tenseIcon}
-            sadIcon={this.state.sadIcon}
-            handleClickAutumn={this.handleClickAutumn}
-          />
+          <Route exact path='/moodinput' render={() =>
+            <>
+              <MoodInput
+                user = {this.state.user}
+              />
           </>
         }/>
 

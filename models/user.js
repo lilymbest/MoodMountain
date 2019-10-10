@@ -7,11 +7,26 @@ const userSchema = new mongoose.Schema({
   name: String,
   email: {type: String, required: true, lowercase: true, unique: true},
   password: String,
-  euphoric: Number,
-  happy: Number,
-  neutral: Number,
-  tense: Number,
-  sad: Number,
+  euphoric: {
+    type: Number,
+    default: 1,
+  },
+  happy:{
+    type: Number,
+    default: 1,
+  },
+  neutral: {
+    type: Number,
+    default: 1,
+  },
+  tense: {
+    type: Number,
+    default: 1,
+  },
+  sad: {
+    type: Number,
+    default: 1,
+  },
   themeColors: Array,
   themeColor: {
     type: String,

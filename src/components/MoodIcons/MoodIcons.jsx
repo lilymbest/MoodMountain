@@ -11,23 +11,23 @@ class MoodIcons extends Component{
         
                 <div className="moodSelector">
                     <div className="mood">
-                        <img className="moodIcon" src={this.props.euphoricIcon} alt=""/>
+                        <img className="moodIcon" src={this.props.user.euphoricIcon} alt=""/>
                         <h3 className="moodLabel">Euphoric</h3>
                         </div> 
                     <div className="mood">
-                        <img className="moodIcon" src={this.props.happyIcon} alt=""/>
+                        <img className="moodIcon" src={this.props.user.happyIcon} alt=""/>
                         <h3 className="moodLabel">Elevated</h3>
                         </div> 
                     <div className="mood">
-                        <img className="moodIcon" src={this.props.neutralIcon} alt=""/>
+                        <img className="moodIcon" src={this.props.user.neutralIcon} alt=""/>
                         <h3 className="moodLabel">Neutral</h3>
                         </div> 
                      <div className="mood">
-                        <img className="moodIcon" src={this.props.tenseIcon} alt=""/>
+                        <img className="moodIcon" src={this.props.user.tenseIcon} alt=""/>
                         <h3 className="moodLabel">Tense</h3>
                         </div> 
                     <div className="mood">
-                        <img className="moodIcon" src={this.props.sadIcon} alt=""/>
+                        <img className="moodIcon" src={this.props.user.sadIcon} alt=""/>
                         <h3 className="moodLabel">Low</h3>
                         </div> 
                     </div>
