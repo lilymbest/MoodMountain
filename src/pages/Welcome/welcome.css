@@ -1,0 +1,22 @@
+.welcomeMessage {
+  font-family: 'Assistant', sans-serif;
+  font-size: calc(25px + (40 - 25) * ((100vw - 300px) / (1600 - 300)));
+  font-weight: bold;
+  text-transform: none;
+  color: #90E0F3;
+  margin-top: 3em;
+}
+
+.arrows {
+  width: 10%;
+  height: 10%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

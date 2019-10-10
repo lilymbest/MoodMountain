@@ -1,16 +1,30 @@
 .signUpForm {
   text-align: center;
-  margin-top: 3em;
-  margin-bottom: 3em;
+  margin-top: 2em;
 }
 
+.themeColor {
+  margin-top: 10px;
+  margin-bottom: 10px; 
+}
+/* 
 .themeSelections1, .themeSelections2 {
   display: flex;
   justify-content: center;
   align-items: center;
+} */
 
+.chooseTheme{
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
 
 .button {
   margin: 5px;
 }
+
+

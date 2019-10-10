@@ -5,7 +5,7 @@
   .logo {
     height: calc(200px + (350 - 200) * ((100vw - 300px) / (1600 - 300)));
     width: calc(200px + (350 - 200) * ((100vw - 300px) / (1600 - 300)));
-    margin-top: 4em;
+    margin-top: 2em;
   }
 
   .auth{
@@ -27,7 +27,7 @@
   }
 
   .authBtn {
-    margin-top: 40px;
+    margin-top: 20px;
     display: inline-flex;
   }
 

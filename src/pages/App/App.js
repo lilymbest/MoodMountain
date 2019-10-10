@@ -182,7 +182,7 @@ handleSignupOrLogin = () => {
               handleSignupOrLogin={this.handleSignupOrLogin}
             />
           }/>
-        <Route exact path='/howareyou' render={() =>
+        <Route exact path='/moodinput' render={() =>
         <>
         <Theme 
         themeIcon={this.state.themeIcon}

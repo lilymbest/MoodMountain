@@ -197,7 +197,6 @@ handleSubmit = async (e) => {
   render() {
     return (
       <div className="signUpForm">
-        <img className="loginLogo" alt="logo" src="images/MoodMountain.png" />
         <MoodMountain />
         <header className="header-footer">Sign Up</header>
         <form className="form-horizontal" onSubmit={this.handleSubmit} >
@@ -230,7 +229,7 @@ handleSubmit = async (e) => {
         </form>
 
         <div className="chooseATheme">
-          <h2>Select a Theme Color:</h2>
+          <h2 className="themeColor">Select a Theme Color:</h2>
           <div className="themeSelections1">
             <div className="chooseTheme">
               <button onClick={() => this.handleClickDefault()}><img

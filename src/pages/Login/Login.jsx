@@ -34,7 +34,6 @@ class Login extends Component {
   render() {
     return (
       <div className="Login">
-        <img className="loginLogo" alt="logo" src="images/MoodMountain.png" />
         <MoodMountain />
         <header className="header-footer">Log In</header>
         <form className="form-horizontal" onSubmit={this.handleSubmit} >
