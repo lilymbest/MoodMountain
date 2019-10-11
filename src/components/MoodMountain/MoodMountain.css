@@ -9,6 +9,7 @@
   height: calc(100px + (350 - 100) * ((100vw - 300px) / (1600 - 300)));
   width: calc(100px + (350 - 100) * ((100vw - 300px) / (1600 - 300)));
   margin-top: 60px;
+  margin-left: 55px;
   display: grid;
   justify-content: center;
   align-items: center;
