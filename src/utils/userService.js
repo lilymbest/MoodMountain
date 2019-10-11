@@ -17,6 +17,18 @@ function signup(user) {
   .then((token) => token.token);
 }
 
+function moodInput(user) {
+  return fetch(BASE_URL + 'moodinput', {
+    method: 'POST',
+    headers: new Headers({'Content-Type': 'application/json'}),
+    body: JSON.stringify(user)
+  })
+  .then(res => {
+    if (res.ok) return res.json();
+    throw new Error('error');
+  })
+}
+
 function getUser() {
   return tokenService.getUserFromToken();
 }
@@ -43,5 +55,6 @@ export default {
   signup, 
   getUser,
   logout,
-  login
+  login,
+  moodInput
 };

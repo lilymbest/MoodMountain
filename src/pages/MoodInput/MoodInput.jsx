@@ -7,9 +7,20 @@ import userService from '../../utils/userService';
 class MoodInput extends Component {
   constructor() {
     super()
-  this.state = {
+    let user = userService.getUser()
+    let userEuphoric = user.euphoric
+    let userHappy = user.happy
+    let userNeutral = user.neutral
+    let userTense = user.tense
+    let userSad = user.sad
+    this.state = {
     user: userService.getUser(),
-    moods: ['Euphoric', 'Elevated', 'Neutral', 'Tense', 'Low']
+    moods: ['Euphoric', 'Elevated', 'Neutral', 'Tense', 'Low'],
+    euphoric: userEuphoric,
+    happy: userHappy,
+    neutral: userNeutral,
+    tense: userTense,
+    sad: userSad,
   }
   this.handleClickEuphoric = this.handleClickEuphoric.bind(this)
   this.handleClickElevated = this.handleClickElevated.bind(this)
@@ -18,34 +29,42 @@ class MoodInput extends Component {
   this.handleClickSad = this.handleClickSad.bind(this)
   }  
   handleClickEuphoric() {
-    var euphoricCount = this.state.user.euphoric
-    console.log(this.state.user.euphoric)
+    var euphoricCount = this.state.euphoric
     return euphoricCount += 1
     
   }
   handleClickElevated() {
-    var elevatedCount = this.state.user.happy
-    console.log(this.state.user.happy)
+    var elevatedCount = this.state.happy
     return elevatedCount += 1
     
   }
   handleClickNeutral() {
-    var neutralCount = this.state.user.neutral
-    console.log(this.state.user.neutral)
+    var neutralCount = this.state.neutral
     return neutralCount += 1
     
   }
   handleClickTense() {
-    var tenseCount = this.state.user.tense
-    console.log(this.state.user.tense)
+    var tenseCount = this.state.tense
     return tenseCount += 1 
   }
   handleClickSad() {
-    var sadCount = this.state.user.sad
-    console.log(this.state.user.sad)
-    return sadCount + 1
+    var sadCount = this.state.sad
+    return sadCount += 1
    
   }
+
+  handleSubmit = async (e) => {
+    e.preventDefault();
+      try {
+        await userService.moodInput(this.state);
+        // Successfully signed up - show GamePage
+        this.props.history.push('/')
+      } catch (err) {
+      // Invalid user data (probably duplicate email)
+      console.log(err.message);
+    }
+  }
+
   render () {
     return (
       <Switch>
@@ -54,7 +73,7 @@ class MoodInput extends Component {
       <Route exact path='/MoodInput' render={() =>
       <>
         <header className='feelingToday'>How are you today?</header>
-
+        <form className="form-horizontal" onSubmit={this.handleSubmit} >
         <div className="moodSelector">
           <div>
               <button onClick={() => this.handleClickEuphoric()}><img className="btn" src={this.state.user.euphoricIcon} /></button>
@@ -77,10 +96,7 @@ class MoodInput extends Component {
               <h3>{this.state.moods[4]}</h3>
           </div> 
         </div>
-        <div className="description">
-        <input className="description" type="text"/>
-        <h3>Description</h3>
-        </div>
+        </form>
         </>
       } />
       </div>

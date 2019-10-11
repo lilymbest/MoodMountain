@@ -4,13 +4,10 @@ const SECRET = process.env.SECRET;
 
 module.exports = {
   signup,
-  login
+  login,
+  moodInput,
 };
 
-
-function moodInput(req, res) {
-  
-}
 
 async function signup(req, res) {
   const user = new User(req.body);
@@ -42,8 +39,9 @@ async function login(req, res) {
   }
 }
 
-function changeTheme(req, res) {
-  let user = User.findById
+function moodInput(req, res) {
+  const user = User.findByIdAndUpdate()
+  user.save()
 }
 
 /*----- Helper Functions -----*/

@@ -16,7 +16,7 @@ class SignupForm extends Component {
       tense: 1,
       sad: 1,
       themeColors: [],
-      themeIcon: 'images/MoodMountain.png',
+      themeIcon: 'images/icons/MoodMountain.png',
       themeColor: '#D17B88',
       euphoricIcon: 'images/moodIcons/Default/euphoricDefault.png',
       happyIcon: 'images/moodIcons/Default/happyDefault.png',
@@ -83,7 +83,7 @@ class SignupForm extends Component {
     var neutralIcon = 'images/Icons/Glacier/neutralGlacier.png'
     var tenseIcon = 'images/Icons/Glacier/tenseGlacier.png'
     var sadIcon = 'images/Icons/Glacier/zsadGlacier.png'
-    var glacier = ''
+    var glacier = 'images/themeIcons/glacierthemeicon.png'
     var glacierBackground = '#0E6BA8'
     var glacierColors = ["#A6E1FA", "#0E6BA8", "#0A2472", "#001C55", "#00072D"]
     this.setState({themeIcon:glacier})
@@ -101,7 +101,7 @@ class SignupForm extends Component {
     var neutralIcon = 'images/Icons/Lavender/neutralLavender.png'
     var tenseIcon = 'images/Icons/Lavender/tenseLavender.png'
     var sadIcon = 'images/Icons/Lavender/zsadLavender.png'
-    var lavender = ''
+    var lavender = 'images/themeIcons/lavenderthemeicon.png'
     var lavenderBackground = '#DDCAD9'
     var defaultColors = ["#EAFDF8", "#E5E9EC", "#DDCAD9", "#D1B1CB", "#7C616C"]
     this.setState({themeIcon:lavender})
@@ -119,7 +119,7 @@ class SignupForm extends Component {
     var neutralIcon = 'images/Icons/Riverbed/neutralRiverbed.png'
     var tenseIcon = 'images/Icons/Riverbed/tenseRiverbed.png'
     var sadIcon = 'images/Icons/Riverbed/zsadRiverbed.png'
-    var riverbed = ''
+    var riverbed = 'images/themeIcons/riverbedthemeicon.png'
     var riverbedBackground = '#D0EFB1'
     var riverbedColors = ['#D0EFB1', '#B3D89C', '#9DC3C2', '#77A6B6', '#4D7298']
     this.setState({themeIcon:riverbed})
@@ -137,7 +137,7 @@ class SignupForm extends Component {
     var neutralIcon = 'images/Icons/Default/neutralDefault.png'
     var tenseIcon = 'images/Icons/Default/tenseDefault.png'
     var sadIcon = 'images/Icons/Default/zsadDefault.png'
-    var defaultTheme = ''
+    var defaultTheme = 'images/icons/MoodMountian.png'
     var defaultBackground = '#9BC53D'
     var defaultColors = ["#75F4F4", "#90E0F3", "#B8B3E9", "#D999B9", "#D17B88"]
     this.setState({themeIcon:defaultTheme})
@@ -196,8 +196,15 @@ class SignupForm extends Component {
     return (
       <div className="signUpForm">
         <MoodMountain />
-
         <div className="signUp">
+        <div className='preview'>
+          <div className='preview-nav' style={{backgroundColor: this.state.themeColor}}>
+            <img className='preview-img'src={this.state.themeIcon} alt=""/>
+          </div>
+          <div className='preview-btm-nav' style={{backgroundColor: this.state.themeColor}}>
+
+          </div>
+        </div>
         <form className="form-horizontal" onSubmit={this.handleSubmit} >
         <h2 className="themeColor">Sign Up:</h2>
           <div className="form-group">
@@ -226,7 +233,7 @@ class SignupForm extends Component {
           <div className="themeSelections1">
             <div className="chooseTheme">
               <button onClick={() => this.handleClickDefault()}><img
-              src="images/moodmountain.png" alt="Default Icon" className="themeColor"/></button>
+              src="images/Icons/moodmountain.png" alt="Default Icon" className="themeColor"/></button>
               </div> 
             <div className="chooseTheme">
               <button onClick={() => this.handleClickAutumn()}><img
@@ -243,7 +250,7 @@ class SignupForm extends Component {
               src="images/glacierthemeicon.png" alt="Glacier Icon" className="themeColor"/></button>
               </div>  
             <div className="chooseTheme">
-              <button onClick={() => this.handleClickRainbow()}><img
+              <button onClick={() => this.handleClickRiverbed()}><img
               src="images/riverbedthemeicon.png" alt="Riverbed Icon" className="themeColor"/></button>
               </div>  
             <div className="chooseTheme">
