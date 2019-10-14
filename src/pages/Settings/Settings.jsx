@@ -9,7 +9,7 @@ class Theme extends Component{
     this.state = {
     images: ['images/autumnthemeicon.png', 
             'images/forestthemeicon.png', 
-            'images/glacierthemeicon.png',
+            'images/glacierthemeicon.png', 
             'images/lavenderthemeicon.png',
             'images/rainbowthemeicon.png',
             'images/MoodMountain.png'
@@ -119,8 +119,8 @@ handleClickDefault(){
 
 render() {
     return (
-
-        <div className="chooseATheme" style={{background: this.state.themeBackground}}>
+        // style={{background: this.state.themeBackground}}
+        <div className="chooseATheme">
         <h2 className="themeColor">Select a Theme Color:</h2>
         <div className="themeSelections1">
           <div className="chooseTheme">

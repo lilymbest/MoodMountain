@@ -75,24 +75,24 @@ class MoodInput extends Component {
         <header className='feelingToday'>How are you today?</header>
         <form className="form-horizontal" onSubmit={this.handleSubmit} >
         <div className="moodSelector">
-          <div>
-              <button onClick={() => this.handleClickEuphoric()}><img className="btn" src={this.state.user.euphoricIcon} /></button>
+          <div className="moodSelectorIcons">
+              <button className="moodButton" onClick={() => this.handleClickEuphoric()}><img className="btnMoodInput" src={this.state.user.euphoricIcon} /></button>
               <h3>{this.state.moods[0]}</h3>
           </div> 
-          <div>
-              <button onClick={() => this.handleClickElevated()}><img className="btn" src={this.state.user.happyIcon} /></button>
+          <div className="moodSelectorIcons">
+              <button className="moodButton" onClick={() => this.handleClickElevated()}><img className="btnMoodInput" src={this.state.user.happyIcon} /></button>
               <h3>{this.state.moods[1]}</h3>
           </div> 
-          <div>
-              <button onClick={() => this.handleClickNeutral()}><img className="btn" src={this.state.user.neutralIcon} /></button>
+          <div className="moodSelectorIcons">
+              <button className="moodButton" onClick={() => this.handleClickNeutral()}><img className="btnMoodInput" src={this.state.user.neutralIcon} /></button>
               <h3>{this.state.moods[2]}</h3>
           </div> 
-          <div>
-              <button onClick={() => this.handleClickTense()}><img className="btn" src={this.state.user.tenseIcon} /></button>
+          <div className="moodSelectorIcons">
+              <button className="moodButton" onClick={() => this.handleClickTense()}><img className="btnMoodInput" src={this.state.user.tenseIcon} /></button>
               <h3>{this.state.moods[3]}</h3>
           </div> 
-          <div>
-              <button onClick={() => this.handleClickSad()}><img className="btn" src={this.state.user.sadIcon} /></button>
+          <div className="moodSelectorIcons">
+              <button className="moodButton" onClick={() => this.handleClickSad()}><img className="btnMoodInput" src={this.state.user.sadIcon} /></button>
               <h3>{this.state.moods[4]}</h3>
           </div> 
         </div>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './MoodIcons.css'
+import './MoodIcons.module.css'
 import { Link } from 'react-router-dom';
 
 class MoodIcons extends Component{

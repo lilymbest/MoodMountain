@@ -224,7 +224,15 @@ class SignupForm extends Component {
                 <input type="password" className="form-control" placeholder="Confirm Password" value={this.state.passwordConf} name="passwordConf" onChange={this.handleChange} />
               </div>
             </div>
-          </form>
+            <div className="form-group">
+              <div className="col-sm-12 text-center">
+            <button className="btn btn-default" disabled={this.isFormInvalid()}>Sign Up</button>
+                <Link to='/'>Cancel</Link>
+            </div>
+            </div>
+            </form>
+
+
           <div className="chooseATheme">
             <h2 className="formHeader">Select a Theme Color:</h2>
             <div className="themeSelections1">
@@ -241,7 +249,7 @@ class SignupForm extends Component {
                 src="images/forestthemeicon.png" alt="Forest Icon" className="themeColor"/></button>
                 </div> 
             </div>
-          <div className="themeSelections2">
+            <div className="themeSelections2">
               <div className="chooseTheme">
                 <button onClick={() => this.handleClickGlacier()}><img 
                 src="images/glacierthemeicon.png" alt="Glacier Icon" className="themeColor"/></button>
@@ -265,14 +273,6 @@ class SignupForm extends Component {
               </div>
               </div>
               </div>
-              <div className="form-group">
-              <div className="col-sm-12 text-center">
-            <button className="btn btn-default" disabled={this.isFormInvalid()}>Sign Up</button>
-                <Link to='/land'>Cancel</Link>
-
-
-            </div>
-            </div>
         </div>
     );
   }

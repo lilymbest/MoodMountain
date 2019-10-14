@@ -53,9 +53,9 @@ class DonutChart extends React.Component {
         return (
         <div>
             <div className="moodChartHeader">
-                <button onClick={() => this.handleLastClick()}> <img className="arrows" src="images/appIcons/black_arrow_left.svg"></img></button>
+                {/* <button onClick={() => this.handleLastClick()}> <img className="arrows" src="images/appIcons/black_arrow_left.svg"></img></button> */}
                     <h1>{this.state.month}</h1>
-                <button onClick={() => this.handleNextClick()}> <img className="arrows" src="images/appIcons/black_arrow_right.svg"></img></button>
+                {/* <button onClick={() => this.handleNextClick()}> <img className="arrows" src="images/appIcons/black_arrow_right.svg"></img></button> */}
             </div>
             <div className="moodChart" onLoad={() => this.setState({colors: this.state.user.themeColors}), console.log(this.state.user.themeColors)}>
                 <ReactApexChart options={this.state.options} series={this.state.series} type="donut" width="380" user={this.state.user} colors={this.state.colors} /> 
