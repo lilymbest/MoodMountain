@@ -2,34 +2,19 @@
 
 ## Overview
 
-Mood Mountain is an emotional tracking app. Users are able to make daily entries on feelings≥ 
+Mood Mountain is an emotional tracking app. Users are able to make daily entries on feelings
 
 [Mood Mountain](https://moodmountain.herokuapp.com/)
 
 [Trello](https://trello.com/b/MtRJppKw/moodtracker)
 
-## Entity Relationship Diagram
-![image description](../master/images/erd.jpg)
-
 ## Wireframe
 
-![Wireframe](../master/images/Home.jpg)
+![Wireframe](images/Wireframe-1.png)
 
-![Wireframe](../master/images/AllEvents.jpg)
+![Wireframe](images/Wireframe-2.png)
 
-![Wireframe](../master/images/CreateEvent.jpg)
-
-![Wireframe](../master/images/Detail.jpg)
-
-## Screenshots
-
-![image description](../master/images/homescreen.jpg)
-
-![image description](../master/images/allgroups.jpg)
-
-![image description](../master/images/groups.jpg)
-
-![image description](../master/images/details.jpg)
+![Wireframe](images/Wireframe-3.png)
 
 
 ## User Stories
@@ -45,28 +30,13 @@ As a user I want to:
 - choose a color theme that matches my style
 
 
-
 ## Technologies Used
 HTML, CSS, Mongoose, Express JS, React JS, Node JS, Heroku, ApexCharts 
 
 ## Stretch Goals
 
-- Additional mood factors: 
-  Hours of Sleep
+- Add additional mood factors including: *Hours of Sleep, Hours of Work, Caffeine Intake, Water Intake, Number of Meals/Skipped Meals, Taken medicine, Period cycle*
 
-  Hours of Work
-
-  Caffeine Intake
-
-  Water Intake
-
-
-  Number of Meals/Skipped Meals
-
-  Take medicine
-  
-  Period cycle
-
-- Tips to keep or address moods
+- Tips for dealing with moods
 - Mood Journal
-- Push Notifications - How are you feeling today
+- Daily reminder push notifications
