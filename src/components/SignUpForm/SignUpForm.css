@@ -36,8 +36,19 @@
 
 div.preview {
   border: 2px solid black;
-  height: 170px;
+  height: 120px;
   width: 100px;
+  margin-left: 100px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.preview-nav {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
 }
 
 img.preview-img {
@@ -47,10 +58,11 @@ img.preview-img {
 
 div.preview-btm-nav {
   align-self: center;
-  margin-top: 96px;
+  margin-top: 50px;
   height: 30px;
   width: 100px;
 }
+
 
 /* Larger than phablet */
 @media (min-width: 550px) {
@@ -63,7 +75,7 @@ div.preview-btm-nav {
     margin-left: 30px;
   }
 
-  .themeColor {
+  .formHeader {
     margin-bottom: 10px; 
   }
 
