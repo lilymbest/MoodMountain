@@ -11,7 +11,7 @@
     display: inline-flex;
   }
 
-  .btnSignIn{
+  .btnSignIn, .btnSignUp {
     font-family: 'Assistant', sans-serif;
     font-size: calc(22px + (50 - 22) * ((100vw - 300px) / (1600 - 300)));
     font-style: normal;
@@ -27,17 +27,5 @@
   }
 
   .btnSignUp {
-    font-family: 'Assistant', sans-serif;
-    font-size: calc(22px + (50 - 22) * ((100vw - 300px) / (1600 - 300)));
-    font-style: normal;
-    font-weight: bold;
-    letter-spacing: normal;
-    text-decoration: none;
-    text-align: center;
-    background-color: #B8B3E9;
-    color: white;
-    padding: 15px;
-    height: calc(35px + (60 - 35) * ((100vw - 300px) / (1600 - 300)));
-    width: auto;
     margin-left: .75em;
   }

@@ -2,25 +2,36 @@
   font-family: 'Barlow', sans-serif;
   font-size: calc(28px + (50 - 28) * ((100vw - 300px) / (1600 - 300)));
   letter-spacing: 1px;
-  margin-bottom: 5px;
   font-style: normal;
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: normal;
   text-decoration: none;
   text-align: center;
-  margin-top: 6em;
+  margin-top: 3em;
+  margin-bottom: 5px;
 }
 
-.moodSelector {
+.moodIcon {
+  width: 80%;
+  height: 80%;
+}
+
+.mood {
+  width: 100px;
+}
+
+.moodSelector, div .moodSelector{
   font-family: 'Assistant', sans-serif;
-  font-size: 30px;
+  font-size: calc(15px + (30 - 15) * ((100vw - 300px) / (1600 - 300)));
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
   text-decoration: none;
   text-align: center;
-  display: inline;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
 }
 
 element.style {
@@ -29,7 +40,6 @@ element.style {
 
 div.description {
   text-align: center;
-  
 }
 
 input.description {
@@ -39,19 +49,16 @@ input.description {
   overflow:hidden;
 }
 
-.btnMood, .btnTheme {
-  font-family: 'Assistant', sans-serif;
-  font-size: calc(22px + (50 - 22) * ((100vw - 300px) / (1600 - 300)));
-  font-style: normal;
-  font-weight: bold;
-  letter-spacing: normal;
-  text-decoration: none;  
-  text-align: center;
-  background-color: #B8B3E9;
-  color: white;
-  padding: 15px;
-  height: calc(35px + (60 - 35) * ((100vw - 300px) / (1600 - 300)));
-  width: auto;
+.form-horizontal {
+  display: inline-block;
 }
 
+.moodSelectorIcons {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
 
+.moodButton {
+  padding: 5px;
+}

@@ -77,6 +77,7 @@ div.preview-btm-nav {
 
   .formHeader {
     margin-bottom: 10px; 
+    margin-top: 10px;
   }
 
   img.themeColor {
@@ -92,12 +93,9 @@ div.preview-btm-nav {
     align-items: center;
   }
 
-  .button {
-    margin: 5px;
-  }
-
   .chooseATheme {
     margin-left: 100px;
+    margin-top: 50px;
   }
 }
 
