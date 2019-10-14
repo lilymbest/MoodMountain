@@ -10,11 +10,13 @@ Mood Mountain is an emotional tracking app. Users are able to make daily entries
 
 ## Wireframe
 
-![Wireframe](images/Wireframe-1.png)
+![Wireframe](public/images/readme/Wireframe-1.png)
 
-![Wireframe](images/Wireframe-2.png)
+![Wireframe](public/images/readme/Wireframe-2.png)
 
-![Wireframe](images/Wireframe-3.png)
+![Wireframe](public/images/readme/Wireframe-3.png)
+
+
 
 
 ## User Stories
