@@ -137,8 +137,8 @@ class SignupForm extends Component {
     var neutralIcon = 'images/Icons/Default/neutralDefault.png'
     var tenseIcon = 'images/Icons/Default/tenseDefault.png'
     var sadIcon = 'images/Icons/Default/zsadDefault.png'
-    var defaultTheme = 'images/icons/MoodMountian.png'
-    var defaultBackground = '#9BC53D'
+    var defaultTheme = 'images/MoodMountian.png'
+    var defaultBackground = '#D17B88'
     var defaultColors = ["#75F4F4", "#90E0F3", "#B8B3E9", "#D999B9", "#D17B88"]
     this.setState({themeIcon:defaultTheme})
     this.setState({themeColor:defaultBackground})
@@ -209,10 +209,15 @@ class SignupForm extends Component {
                 <input type="email" className="form-control" placeholder="Email" value={this.state.email} name="email" onChange={this.handleChange} />
               </div>
             </div>
+
             <div className="form-group">
               <div className="col-sm-12">
                 <input type="password" className="form-control" placeholder="Password" value={this.state.password} name="password" onChange={this.handleChange} />
               </div>
+
+          </div>
+        </form>
+        
             </div>
             <div className="form-group">
               <div className="col-sm-12">
