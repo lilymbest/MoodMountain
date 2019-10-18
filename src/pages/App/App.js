@@ -1,7 +1,6 @@
 /* Dependencies */
 import React, { Component } from 'react';
-import { Route, Switch, Link } from 'react-router-dom'
-import { directive, tsImportEqualsDeclaration } from '@babel/types'
+import { Route, Switch} from 'react-router-dom'
 import userService from '../../utils/userService';
 
 /* Components */

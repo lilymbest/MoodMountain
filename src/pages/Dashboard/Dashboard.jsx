@@ -1,9 +1,7 @@
 /* Dependencies */
 import React from 'react'
-import ReactDOM from 'react-dom';
 import ReactApexChart from 'react-apexcharts'
 import userService from '../../utils/userService';
-import { thisTypeAnnotation } from '@babel/types';
 /* Styles */
 import './Dashboard.css';
 
@@ -16,7 +14,7 @@ class DonutChart extends React.Component {
         let euphoric = user.euphoric
         let happy = user.happy
         let neutral = user.neutral
-        let tense = user. tense
+        let tense = user.tense
         let sad = user.sad
         this.state = {
             user: userService.getUser(),
@@ -57,7 +55,7 @@ class DonutChart extends React.Component {
                     <h1>{this.state.month}</h1>
                 {/* <button onClick={() => this.handleNextClick()}> <img className="arrows" src="images/appIcons/black_arrow_right.svg"></img></button> */}
             </div>
-            <div className="moodChart" onLoad={() => this.setState({colors: this.state.user.themeColors}), console.log(this.state.user.themeColors)}>
+            <div className="moodChart" onLoad={() => this.setState({colors: this.state.user.themeColors})}>
                 <ReactApexChart options={this.state.options} series={this.state.series} type="donut" width="380" user={this.state.user} colors={this.state.colors} /> 
             </div>
         </div>

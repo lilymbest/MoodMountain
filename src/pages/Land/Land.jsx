@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
-import { Route, Switch, Link } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import './Land.css'
 import MoodMountain from '../../components/MoodMountain/MoodMountain';
-import SignUp from '../../pages/SignUp/SignUp';
-import Login from '../../pages/Login/Login'
+
 
 
 

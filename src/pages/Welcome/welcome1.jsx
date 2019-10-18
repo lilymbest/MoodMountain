@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './welcome.css'
 import MoodMountain from '../../components/MoodMountain/MoodMountain';
@@ -17,7 +17,7 @@ const Welcome1 = (props) => {
           Mood Mountain is an emotional tracking app. 
           Mood Mountain is an emotional tracking app. 
         </p>
-        <Link to='/welcome2'><img className="arrows" src="images/appIcons/black_arrow_right.svg"></img></Link>
+        <Link to='/welcome2'><img className="arrows" alt="" src="images/appIcons/black_arrow_right.svg"></img></Link>
 
       </div>
     );

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Settings.css'
-import MoodIcons from '../../components/MoodIcons/MoodIcons'
 
 class Theme extends Component{
     constructor(props){
