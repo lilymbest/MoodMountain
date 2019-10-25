@@ -6,7 +6,7 @@ const NavBarTop = (props) => {
   let nav = props.user ?
     <div>
       <div className="logoImage">
-      <Link to='/'><img src="images/MoodMountain.png" alt="" class="appLogo"/></Link>
+      <Link to='/'><img src="images/MoodMountain.png" alt="" className="appLogo"/></Link>
       </div>
 
       <div className='NavBarWelcome'>
@@ -20,7 +20,7 @@ const NavBarTop = (props) => {
     :
     <div>
       <div className="Logo">
-      <Link to='/'><img src="images/MoodMountain.png" alt="" class="appLogo"/></Link>
+      <Link to='/'><img src="images/MoodMountain.png" alt="" className="appLogo"/></Link>
       </div>
     </div>;
 

@@ -1,12 +1,16 @@
+.form-horizontal {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-control {
+  border: .5px solid lightgray;
+}
+
 /* Larger than mobile */
 @media (max-width: 549px) {
   .signUp {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .form-horizontal {
     display: grid;
     justify-content: center;
     align-items: center;
@@ -35,7 +39,7 @@
 }
 
 div.preview {
-  border: 2px solid black;
+  border: 1px solid darkgray;
   height: 120px;
   width: 100px;
   margin-left: 100px;
@@ -51,6 +55,16 @@ div.preview {
   height: 40px;
 }
 
+.preview-text {
+  font-family: 'Assistant', sans-serif;
+  font-size: 12px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 30px
+}
+
 img.preview-img {
   height: 20px;
   width: 20px;
@@ -58,9 +72,14 @@ img.preview-img {
 
 div.preview-btm-nav {
   align-self: center;
-  margin-top: 50px;
+  /* margin-top: 20px; */
   height: 30px;
   width: 100px;
+  margin-bottom: 20px;
+}
+
+div button-group {
+  margin: 0px;
 }
 
 
