@@ -48,6 +48,7 @@ class Login extends Component {
           <div className="form-group">
             <div className="col-sm-12 text-center">
               <button className="btnLogin">Log In</button>
+              {/* <button className="btnLogin">Cancel</button> */}
               <Link to='/'>Cancel</Link>
             </div>
           </div>

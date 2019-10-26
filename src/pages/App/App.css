@@ -13,19 +13,23 @@
 
   .btnSignIn, .btnSignUp {
     font-family: 'Assistant', sans-serif;
-    font-size: calc(22px + (50 - 22) * ((100vw - 300px) / (1600 - 300)));
+    font-size: 30px;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     letter-spacing: normal;
     text-decoration: none;
     text-align: center;
-    background-color: #B8B3E9;
+    background-color: #b8b3e9;
     color: white;
     padding: 15px;
-    height: calc(35px + (60 - 35) * ((100vw - 300px) / (1600 - 300)));
+    height: calc(35px + 25* ((100vw - 300px) / (1300)));
     width: auto;
   }
 
   .btnSignUp {
     margin-left: .75em;
+  }
+
+  Link {
+    color: black;
   }

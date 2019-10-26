@@ -50,7 +50,6 @@ class MoodInput extends Component {
   handleClickSad() {
     var sadCount = this.state.sad
     return sadCount += 1
-   
   }
 
   handleSubmit = async (e) => {

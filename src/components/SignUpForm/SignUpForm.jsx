@@ -137,7 +137,7 @@ class SignupForm extends Component {
     var neutralIcon = 'images/Icons/Default/neutralDefault.png'
     var tenseIcon = 'images/Icons/Default/tenseDefault.png'
     var sadIcon = 'images/Icons/Default/zsadDefault.png'
-    var defaultTheme = 'images/MoodMountian.png'
+    var defaultTheme =  'images/themeIcons/defaultthemeicon.png'
     var defaultBackground = '#D17B88'
     var defaultColors = ["#75F4F4", "#90E0F3", "#B8B3E9", "#D999B9", "#D17B88"]
     this.setState({themeIcon:defaultTheme})
@@ -197,75 +197,73 @@ class SignupForm extends Component {
       <div className="signUpForm">
         <MoodMountain />
         <div className="signUp">
-        <div className='preview'>
-          <div className='preview-nav' style={{backgroundColor: this.state.themeColor}}>
-            <img className='preview-img'src={this.state.themeIcon} alt=""/>
-          </div>
-            <div className='preview-btm-nav' style={{backgroundColor: this.state.themeColor}}>
-          </div>
+
+          <form className="form-horizontal" onSubmit={this.handleSubmit} >
+            <h2 className="formHeader">Sign Up:</h2>
+              <div className="form-group">
+                <input type="text" autocomplete="off" className="form-control" placeholder="Name" value={this.state.name} name="name" onChange={this.handleChange} />
+                </div>
+
+              <div className="form-group">
+                <input type="email" autocomplete="off" className="form-control" placeholder="Email" value={this.state.email} name="email" onChange={this.handleChange} />
+                </div>
+
+              <div className="form-group">
+                <input type="password" autocomplete="off" className="form-control" placeholder="Password" value={this.state.password} name="password" onChange={this.handleChange} />
+                </div>
+
+              <div className="form-group">
+                <input type="password" autocomplete="off" className="form-control" placeholder="Confirm Password" value={this.state.passwordConf} name="passwordConf" onChange={this.handleChange} />
+                </div>
+
+              <div className="button-group">
+                <button className="formSignUp" disabled={this.isFormInvalid()}>Sign Up</button>
+                <Link to='/'>Cancel</Link>
+                </div>
+            </form>
+
+
+          <div className="chooseATheme">
+            <h2 className="formHeader">Select a Theme Color:</h2>
+            <div className="themeSelections1">
+              <div className="chooseTheme">
+                <button onClick={() => this.handleClickDefault()}><img
+                src="images/defaultthemeicon.png" alt="Default Icon" className="themeColor"/></button>
+                </div> 
+              <div className="chooseTheme">
+                <button onClick={() => this.handleClickAutumn()}><img
+                src="images/autumnthemeicon.png" alt="Autumn Icon" className="themeColor"/></button>
+                </div>  
+              <div className="chooseTheme">
+                <button onClick={() => this.handleClickForest()}><img
+                src="images/forestthemeicon.png" alt="Forest Icon" className="themeColor"/></button>
+                </div> 
+            </div>
+            <div className="themeSelections2">
+              <div className="chooseTheme">
+                <button onClick={() => this.handleClickGlacier()}><img 
+                src="images/glacierthemeicon.png" alt="Glacier Icon" className="themeColor"/></button>
+                </div>  
+              <div className="chooseTheme">
+                <button onClick={() => this.handleClickRiverbed()}><img
+                src="images/riverbedthemeicon.png" alt="Riverbed Icon" className="themeColor"/></button>
+                </div>  
+              <div className="chooseTheme">
+                <button onClick={() => this.handleClickLavender()}><img 
+                src="images/lavenderthemeicon.png" alt="Lavender Icon" className="themeColor"/></button>
+                </div> 
+                </div>
+              <div className='preview'>
+                <div className='preview-nav' style={{backgroundColor: this.state.themeColor}}>
+                  <img className='preview-img'src={this.state.themeIcon} alt=""/>
+                </div>
+                <div className="preview-text">Preview the <br></br> theme color here</div>
+                <div className='preview-btm-nav' style={{backgroundColor: this.state.themeColor}}>
+                  </div>
+                </div>
+              </div>
+              </div>
         </div>
-        <form className="form-horizontal" onSubmit={this.handleSubmit} >
-        <h2 className="themeColor">Sign Up:</h2>
-          <div className="form-group">
-            <div className="col-sm-12">
-              <input type="text" className="form-control" placeholder="Name" value={this.state.name} name="name" onChange={this.handleChange} />
-            </div>
-          </div>
-          <div className="form-group">
-            <div className="col-sm-12">
-              <input type="email" className="form-control" placeholder="Email" value={this.state.email} name="email" onChange={this.handleChange} />
-            </div>
-          </div>
-          <div className="form-group">
-            <div className="col-sm-12">
-              <input type="password" className="form-control" placeholder="Password" value={this.state.password} name="password" onChange={this.handleChange} />
-            </div>
-          </div>
-          <div className="form-group">
-            <div className="col-sm-12">
-              <input type="password" className="form-control" placeholder="Confirm Password" value={this.state.passwordConf} name="passwordConf" onChange={this.handleChange} />
-            </div>
-          </div>
-        </form>
-        <div className="chooseATheme">
-          <h2 className="themeColor">Select a Theme Color:</h2>
-          <div className="themeSelections1">
-            <div className="chooseTheme">
-              <button onClick={() => this.handleClickDefault()}><img
-              src='images/MoodMountian.png' alt="Default Icon" className="themeColor"/></button>
-              </div> 
-            <div className="chooseTheme">
-              <button onClick={() => this.handleClickAutumn()}><img
-              src="images/autumnthemeicon.png" alt="Autumn Icon" className="themeColor"/></button>
-              </div>  
-            <div className="chooseTheme">
-              <button onClick={() => this.handleClickForest()}><img
-              src="images/forestthemeicon.png" alt="Forest Icon" className="themeColor"/></button>
-              </div> 
-          </div>
-        <div className="themeSelections2">
-            <div className="chooseTheme">
-              <button onClick={() => this.handleClickGlacier()}><img 
-              src="images/glacierthemeicon.png" alt="Glacier Icon" className="themeColor"/></button>
-              </div>  
-            <div className="chooseTheme">
-              <button onClick={() => this.handleClickRiverbed()}><img
-              src="images/riverbedthemeicon.png" alt="Riverbed Icon" className="themeColor"/></button>
-              </div>  
-            <div className="chooseTheme">
-              <button onClick={() => this.handleClickLavender()}><img 
-              src="images/lavenderthemeicon.png" alt="Lavender Icon" className="themeColor"/></button>
-              </div> 
-            </div>
-            </div>
-            </div>
-            <div className="form-group">
-            <div className="col-sm-12 text-center">
-            <button className="btn btn-default" disabled={this.isFormInvalid()}>Sign Up</button>
-            <Link to='/land'>Cancel</Link>
-          </div>
-          </div>
-      </div>
     );
   }
 }
