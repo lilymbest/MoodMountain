@@ -9,7 +9,7 @@
     "@fullcalendar/core": "^4.3.1",
     "@fullcalendar/daygrid": "^4.3.0",
     "apexcharts": "^3.8.6",
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.0",
     "canvasjs": "^1.8.1",
     "dotenv": "^8.1.0",
     "express": "^4.17.1",
